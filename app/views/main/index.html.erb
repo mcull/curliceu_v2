@@ -1,0 +1,573 @@
+    <a name="top"></a>
+    <div class-"row">
+      <div class="large-12 columns" id="nameError" style="position:relative;top:.5rem;font-size:.7rem;color:red;line-height:.5rem;font-face:bold;display:none"></div>
+    </div>
+    <div class="row" id="name-o">
+      <div class="large-12 columns">
+        <div class="row collapse postfix-round radius">
+          <div class="small-10 columns" >
+            <input type="text" placeholder="Type your name..." id="name" maxlength="10" onkeydown="return checkChar(event);">
+
+          </div>
+          <div class="small-2 columns">
+            <a href="javascript:refreshExamples(true);" id="go" class="button postfix"><i class="fa fa-magic"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 medium-6 small-12 columns" style="margin-bottom:2rem;" >
+        <ul class="example-orbit" data-orbit id="photos">
+          <li>
+           <%= image_tag "Hannah_web.jpg", alt:"slide 1" %>
+          </li>
+          <li class="active">
+           <%= image_tag "Kaylee_web.jpg", alt:"slide 2" %>
+          </li>
+          <li>
+           <%= image_tag "Madison_web.jpg", alt:"slide 3" %>
+          </li>
+          <li>
+           <%= image_tag "Elizabeth_web.jpg", alt:"slide 4" %>
+          </li>
+        </ul>
+
+      </div>
+      <div class="large-6 medium-6 small-12 columns" style="margin-bottom:2rem;">
+        <span id="logo">Curliceu<span style="font-size:.3rem;position:relative;top:.1rem;">&trade;</span></span> Create a <b>custom necklace</b> for yourself, a friend, a loved one, or anyone else who deserves something special.  Simply enter a name or word for the pendant, select a font for the name or word, and finally, select a material for the pendant. Your design will be hand-made to your specifications and hung on an 18" chain for a fun &amp; unique accessory.
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns sectionHead styleHead" id="styleHeader">
+         <a name="chooseStyle"></a>
+        -- Choose Style --
+      </div>
+      <div class="large-12 columns sectionHead subHead styleHead" id="styleSubhead" >
+        Click on your fav
+      </div>
+    </div>
+    <div class="row dynamic" id="scripts">
+    </div>
+    
+    <a name="chooseMaterial"></a>
+    <div class="row" id="materialHeader">
+      <div class="large-12 columns sectionHead material" id="materialHeader"data-magellan-destination="chooseMaterial" >
+        -- Choose Material --
+      </div>
+      <div class="large-12 columns sectionHead subHead material" id="materialSubhead" >
+        Click on your fav
+      </div>
+    </div>
+    <div class="row" >
+      <div class="large-4 medium-4 small-4 columns material"  style="text-align:center;" rel-materialType="Acrylic" rel-price="45">
+        <span class="materialName">Acrylic</span> <span class="price">$45</span>
+         <div class="material" rel-materialType="Gold">
+              Gold<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/24233/preview/Gold%20closeup.jpg?1377709614" width="86" height="66"/>
+        </div>
+       <div class="material" rel-materialType="Pink Passion">
+            Pink<br>
+            <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22105/preview/25090_-_pink_passion_fuit.jpg?1335203665" width="86" height="66"/>
+        </div>
+        <div class="material" rel-materialType="Rain Drop">
+          Blue<br>
+          <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22099/preview/25084_-_raindrop.jpg?1335203663" width="86" height="66"/>
+        </div>
+         <div class="material" rel-materialType="Citrus">
+          Yellow<br>
+          <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/19004/preview/citrus_-_25088.jpg?1335203548" width="86" height="66"/>
+        </div>
+        <!--
+        <div id="glitterHead" class="expando">
+          <div class="menuToggle"><i class="fa fa-plus-square-o"></i> Glitter<br>
+            <div class="exemplar">
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/24233/preview/Gold%20closeup.jpg?1377709614" width="86" height="66"/>
+            </div>
+          </div>
+          <div id="glitter" class="expandedList material" rel-materialType="Glitter" style="display:none">
+            <div class="material" rel-materialType="Gold">
+              Gold<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/24233/preview/Gold%20closeup.jpg?1377709614" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Silver">
+              Silver<br>
+              <img class="comingSoon" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/24227/preview/Silver%20closeup.jpg?1377708196" width="86" height="66"/>
+            </div>
+              <div class="material" rel-materialType="Red">
+              Red<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/24234/preview/Red%20closeup.jpg?1377709691" width="86" height="66"/>
+            </div>
+          </div>
+        </div>
+        <div id="solidHead" class="expando material" rel-materialType="Solid">
+          <div class="menuToggle"><i class="fa fa-plus-square-o"></i> Solid<br>
+            <div class="exemplar">
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/21955/preview/bubble_gum_pink.jpg?1335203621" width="86" height="66"/>
+            </div>
+          </div>
+          <div id="solid" class="expandedList" style="display:none">
+            <div>
+              Pink<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/21955/preview/bubble_gum_pink.jpg?1335203621" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Black">
+              Black<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/18974/preview/black_-_25094.jpg?1335203542" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Red">
+              Red<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22902/preview/24132%20-%20red.jpg?1335381845" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="White">
+              White<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/19039/preview/white_-_25079.jpg?1335203554" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Blue">
+              Blue<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22900/preview/24131%20-%20blue.jpg?1335381667" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Yellow">
+              Yellow<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22897/default/24113%20-%20yellow.jpg?1335381351" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Green">
+              Green<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22904/preview/24133%20-%20green.jpg?1335382020" width="86" height="66"/>
+            </div>
+          </div>
+        </div>
+        <div id="mirrorHead" class="expando material" rel-materialType="Mirrored">
+          <div class="menuToggle"><i class="fa fa-plus-square-o"></i> Mirrored<br>
+            <div class="exemplar">
+              <img  class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22878/preview/blue.jpg?1335213373" width="86" height="66"/>
+            </div>
+          </div>
+          <div id="mirror" class="expandedList" style="display:none">
+            <div class="material" rel-materialType="Blue">
+              Blue<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22878/preview/blue.jpg?1335213373" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Pink">
+              Pink<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22873/preview/pink.jpg?1335213062" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Green">
+              Green<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22882/preview/green.jpg?1335213553" width="86" height="66"/>
+            </div>
+            
+            <div class="material" rel-materialType="Red">
+              Red<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22888/preview/mirror%20red.jpg?1335213854" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Slate Grey">
+              Slate Grey<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22876/preview/slate%20grey.jpg?1335213246" width="86" height="66"/>
+            </div>
+            <div class="material" rel-materialType="Purple">
+              Purple<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22884/preview/purple.jpg?1335213618" width="86" height="66"/>
+            </div>
+          </div>
+        </div>
+        <div id="transHead" class="expando material" rel-materialType="Pastel">
+          <div class="menuToggle"><i class="fa fa-plus-square-o"></i> Pastel<br>
+            <div class="exemplar">
+              <img  class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22135/preview/25087_-_caribbean.jpg?1335203676" width="86" height="66"/>
+            </div>
+          </div>
+          <div id="trans" class="expandedList" style="display:none">
+            <div class="material" rel-materialType="Caribbean">
+              Caribbean<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22135/preview/25087_-_caribbean.jpg?1335203676" width="86" height="66"/>
+            </div>
+             <div class="material" rel-materialType="Pink Passion">
+              Pink Passion<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22105/preview/25090_-_pink_passion_fuit.jpg?1335203665" width="86" height="66"/>
+            </div>
+             <div class="material" rel-materialType="Rain Drop">
+              Rain Drop<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22099/preview/25084_-_raindrop.jpg?1335203663" width="86" height="66"/>
+            </div>
+             <div class="material" rel-materialType="Kiwi">
+              Kiwi<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/22039/preview/25094_-_kiwi.jpg?1335203646" width="86" height="66"/>
+            </div>
+             <div class="material" rel-materialType="Citrus">
+              Citrus<br>
+              <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/19004/preview/citrus_-_25088.jpg?1335203548" width="86" height="66"/>
+            </div>
+          </div>
+        </div>-->
+    </div>
+    <div class="large-4 medium-4 small-4 columns material" style="text-align:center;" rel-materialType="Rubber" rel-price="55">
+    <span class="materialName"><i class="fa fa-recycle" style="color:green;"></i>Rubber</span> <span class="price">$55</span>
+    <div class="material" rel-materialType="Black">
+    Black<br>
+    <img class="soldOut" src="http://www.rubbercal.com/images_item/sheet_rubber/X_Derm_Entry_Medium.jpg" width="86" height="66"/>
+    <div class="soldOutContainer"><div class="soldOutLabel">Sold out!</div></div>
+    </div>
+    <div class="material" rel-materialType="Green Dots">
+    w/Green<br>
+    <img class="soldOut" src="http://www.rubbercal.com/images_item/sheet_rubber/Recycled_Rubber_Corner_Green_Medium.jpg" width="86" height="66"/>
+   <div class="soldOutContainer"><div class="soldOutLabel">Sold out!</div></div>
+    </div>
+    <div class="material" rel-materialType="Blue Dots">
+    w/Blue<br>
+    <img class="soldOut" src="http://www.rubbercal.com/images_item/sheet_rubber/Recycled_Rubber_Texture_Blue_Medium.jpg" width="86" height="66"/>
+    <div class="soldOutContainer"><div class="soldOutLabel">Sold out!</div></div>
+    </div>
+    <div class="material" rel-materialType="Candy Corn">
+    Candy Corn<br>
+    <img class="soldOut" src="http://www.rubbercal.com/images_item/sheet_rubber/Recycled_Rubber_Thickness_Medium.jpg" width="86" height="66"/>
+    <div class="soldOutContainer"><div class="soldOutLabel">Sold out!</div></div>
+    </div>
+  </div>
+  <div class="large-4 medium-4 small-4 columns material" style="text-align:center;" rel-materialType="Wood" rel-price="65">
+    <span class="materialName">Wood</span> <span class="price">$65</span>
+    <div class="material" rel-materialType="Yellowheart">
+      Yellowheart<br>
+    <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/25059/preview/yellowheart.JPG?1407943230" width="86" height="66"/>
+  </div>
+      <div class="material" rel-materialType="Zebrawood">
+      Zebrawood<br>
+      <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/24286/default/Zebrawood%20Final.jpg?1379513081" width="86" height="66"/>
+    </div>
+  <div class="material" rel-materialType="Padauk">
+    Padauk<br>
+    <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/24171/default/Padauk%20New.jpg?1376584558" width="86" height="66"/>
+  </div>
+    
+    <div class="material" rel-materialType="Wenge">
+      Wenge<br>
+      <img class="sample" src="https://dzevsq2emy08i.cloudfront.net/paperclip/technology_image_uploaded_images/24164/default/Wenge%20New.jpg?1376583209" width="86" height="66"/>
+    </div>
+  </div>
+</div>
+<div class="row order sectionHead" >
+  <div class="large-12 columns sectionHead order" id="orderHeader">
+    <a name="order"></a>
+    -- Order --
+  </div>
+  <div class="large-12 columns sectionHead subHead order" id="orderSubhead" >
+    
+  </div>
+</div>
+<div class="row orderForm" id="orderSummary">
+  <div class="large-12 medium-12 small-12 columns">
+      <div class="large-4 medium-4 small-4 columns summaryTitle" id="orderNamePanel">
+        <b>Text</b><br><span id="orderName"></span>
+      </div>
+      <div class="large-4 medium-4 small-4 columns summaryTitle" id="orderMaterialPanel">
+        <b>Material</b><br><span id="orderMaterial"></span>
+      </div>
+      <!--
+      <div class="large-3 medium-4 show-for-large-up columns summaryTitle">
+        <b>Chain</b>
+        <div id="chainType">
+          <input type="radio" name="chainLength" value="16" style="margin:.2rem"> 16" <br>
+          <input type="radio" name="chainLength" value="18" style="margin:.2rem" checked> 18" <br>
+          <input type="radio" name="chainLength" value="24" style="margin:.2rem"> 24" <span style="font-size:.75em">+$5</span>
+          </select>
+        </div>
+      </div> -->
+      <div class="large-4 medium-4 small-4 columns summaryTitle price" id="orderSubtotalContainer">
+        <b>Subtotal</b><br><span id="orderSubtotal"></span>
+      </div>
+  
+  </div>
+</div>
+
+<form action="order/" method="POST" id="payment-form">
+
+<div class="row">
+  <div class="large-6 medium-6 small-12 columns"> 
+    <div class="large-12 columns">
+      <div class="orderFormTitle">
+        Payment
+      </div>
+      <div class="orderForm">
+        <div class="large-8 medium-8 small-8 columns">
+          <label>Charge Card #
+            <input type="text" pattern="\d*" size="20" data-stripe="number"/>
+          </label>
+        </div>
+        <div class="large-4 medium-4 small-4 columns">
+          <label>CVC
+            <input type="text" pattern="\d*" size="4" data-stripe="cvc">
+          </label>
+        </div>
+        <div class="large-4 medium-6 small-4 columns">
+          <label>Exp Mon
+            <select data-stripe="exp-month"/>
+              <option value="01">JAN</option>
+              <option value="02">FEB</option>
+              <option value="03">MAR</option>
+              <option value="04">APR</option>
+              <option value="05">MAY</option>
+              <option value="06">JUN</option>
+              <option value="07">JUL</option>
+              <option value="08">AUG</option>
+              <option value="09">SEP</option>
+              <option value="10">OCT</option>
+              <option value="11">NOV</option>
+              <option value="12">DEC</option>
+            </select>
+          </label>
+        </div>
+        <div class="large-4 medium-6 small-4 columns">
+          <label>Exp Year
+             <select data-stripe="exp-year"/>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+            </select>
+          </label>
+        </div>
+        <div class="large-4 medium-4 small-4 columns"></div>
+      </div>
+    </div>
+    <div class="large-12 columns">
+      <div class="orderFormTitle">Billing</div>
+      <div class="orderForm">
+        <div class="large-12 columns">
+            <label>Name
+              <input type="text" name="billName" id="billName"/>
+            </label>
+        </div>
+        <div class="large-8 medium-8 small-8 columns">
+            <label>Address
+              <input type="text" name="billAddress1" id="billAddress1" data-stripe="address_line1" />
+            </label>
+        </div>
+        <div class="large-4 medium-4 small-4 columns">
+            <label>Apt
+              <input type="text" name="billAddress2" id="billAddress2" data-stripe="address_line2"/>
+            </label>
+        </div>
+        <div class="large-12 columns">
+            <label>City
+              <input type="text" name="billCity" id="billCity" data-stripe="address_city" />
+            </label>
+        </div>
+        <div class="large-3 medium-3 small-3 columns">
+            <label>State
+             <select name="billState" id="billState">
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AZ">AZ</option>
+                <option value="AR">AR</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="DC">DC</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="IA">IA</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="ME">ME</option>
+                <option value="MD">MD</option>
+                <option value="MA">MA</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MS">MS</option>
+                <option value="MO">MO</option>
+                <option value="MT">MT</option>
+                <option value="NE">NE</option>
+                <option value="NV">NV</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NY">NY</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WV">WV</option>
+                <option value="WI">WI</option>
+                <option value="WY">WY</option>
+              </select>
+            </label>
+        </div>
+        <div class="large-4 medium-4 small-4 columns">
+            <label>Zip
+              <input type="text" pattern="\d*" name="billZip" id="billZip" data-stripe="address_zip" />
+            </label>
+        </div>
+        <div class="large-5 medium-5 small-5 columns"></div>
+
+        <div class="large-7 medium-7 small-7 columns">
+          <label>Email
+              <input type="text" name="billEmail" id="billEmail" placeholder="you@email.com"/>
+            </label>
+        </div>
+        <div class="large-5 medium-5 small-5 columns">
+          <label>SMS <small>optional</small>
+              <input type="text" pattern="\d*" name="billSMS" id="billSMS" placeholder="5551234567"/>
+            </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="large-6 medium-6 small-12 columns"> 
+    <div class="large-12 columns">
+      <div class="orderFormTitle">Delivery</div>
+      <div class="orderForm">
+        <div class="large-8 medium-7 small-7 columns">
+            <label>Method
+               <select name="shippingMethod" id="shippingMethod" style="font-family:'Nixie One'">
+                <option value="ground" rel-price="5">Ground +$5</option>
+                <option value="2Day" rel-price="10">2-Day +$10</option>
+                <option value="overnight" rel-price="15">Next Day +$15</option>
+              </select>
+            </label>
+        </div>
+        <div class="large-4 medium-5 small-5 columns" id="eta">
+            <i>Most orders ship in 48 hours</i>
+        </div>
+        <div class="large-12 columns show-for-medium-up vertSpacer">
+           <label>Spacer
+              <input type="text"/>
+            </label>
+        </div>
+      </div>
+    </div> 
+    <div class="large-12 columns">
+      <div class="orderFormTitle">Shipping <small><a href="javascript:copyFromBilling();" title="Copy from billing"><i class="fa fa-clipboard"></i></a></small></div>
+      <div class="orderForm">
+        <div class="large-12 columns">
+            <label>Name
+              <input type="text" name="shipName" id="shipName"/>
+            </label>
+        </div>
+        <div class="large-8 medium-8 small-8 columns">
+            <label>Address
+              <input type="text" name="shipAddress1" id="shipAddress1" />
+            </label>
+        </div>
+        <div class="large-4 medium-4 small-4 columns">
+            <label>Apt
+              <input type="text" name="shipAddress2" id="shipAddress2"/>
+            </label>
+        </div>
+        <div class="large-12 columns">
+            <label>City
+              <input type="text"  name="shipCity" id="shipCity" />
+            </label>
+        </div>
+        <div class="large-3 medium-3 small-3 columns">
+            <label>State
+             <select name="shipState" id="shipState">
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AZ">AZ</option>
+                <option value="AR">AR</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="DC">DC</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="IA">IA</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="ME">ME</option>
+                <option value="MD">MD</option>
+                <option value="MA">MA</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MS">MS</option>
+                <option value="MO">MO</option>
+                <option value="MT">MT</option>
+                <option value="NE">NE</option>
+                <option value="NV">NV</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NY">NY</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WV">WV</option>
+                <option value="WI">WI</option>
+                <option value="WY">WY</option>
+              </select>
+            </label>
+        </div>
+        <div class="large-4 medium-4 small-4 columns">
+            <label>Zip
+              <input type="text" pattern="\d*"s name="shipZip" id="shipZip" />
+            </label>
+        </div>
+        <div class="large-5 medium-5 small-5 columns"></div>
+        <div class="large-12 medium-12 small-12 columns" id="total">
+          Total: <span id="orderTotal">$-</span>
+        </div>
+        <div class="large-12 medium-12 small-12 columns" >
+          <button type="submit" class="button radius success large expand" disabled id="checkout"> <i class="fa fa-lock"></i> Checkout </button>
+        </div>
+        <div class="large-12 medium-12 small-12 columns payment-errors">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+ 
+<div class="row" id="footer"> 
+  <div class="large-12 columns" style="text-align:center;">
+    <h6><small>Hand-made with <i class="fa fa-heart"></i> in Kentucky  &copy;2014 Curliceu <a href="privacy.html">Privacy Policy</a></small></h6>
+    <div id="anchor" style="position:absolute;left:5px;top:5px;color:green;"><i class="fa fa-anchor"></i></div>
+  </div>
+</div>
+
+
+

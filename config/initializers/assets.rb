@@ -9,3 +9,10 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( vendor/modernizr.js )
+Rails.application.config.assets.precompile += %w( jquery.color-2.1.2.js )
+Rails.application.config.assets.precompile += %w( math.uuid.js )
+Rails.application.config.assets.precompile += %w( foundation.css )
+Rails.application.config.assets.precompile += %w( app.css )
+Rails.application.config.assets.precompile += %w( ribbon.css )
+Rails.application.config.assets.precompile += %w( fonts/stylesheet.css )

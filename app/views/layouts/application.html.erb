@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>CcV2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Curliceu" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Cc V2" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'foundation', 'app', 'ribbon', 'fonts/stylesheet','//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.mi
+n.css','//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css', '//fonts.googleapis.com/css?family=Rochester|Noto+Sans|Source+Code+Pro|Nixie+One|Lily+Script+One|Yellowtail|Oleo+Script+Swash+Caps|Yesteryear|Pacifico|Dancing+Script|Special+Elite|Slackey|Norican|Fenix|Headland+One|Holtwood+One+SC|Ovo|Marcellus|Sanchez|Alegreya+SC' %>
 
-<%= yield %>
 
-</body>
+    <%# Modernizr is required for Zurb Foundation %>
+    <%= javascript_include_tag 'vendor/modernizr' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <main role="main">
+       <%= yield %>
+    </main>
+    <%= javascript_include_tag "jquery.color-2.1.2.js", "math.uuid.js", "https://js.stripe.com/v2/" %>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57940806-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
 </html>
