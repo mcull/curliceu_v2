@@ -4,14 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Curliceu" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Cc V2" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag 'foundation', 'app', 'ribbon', 'fonts/stylesheet','//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.mi
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag 'foundation', 'app', 'ribbon', 'fonts','//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.mi
 n.css','//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css', '//fonts.googleapis.com/css?family=Rochester|Noto+Sans|Source+Code+Pro|Nixie+One|Lily+Script+One|Yellowtail|Oleo+Script+Swash+Caps|Yesteryear|Pacifico|Dancing+Script|Special+Elite|Slackey|Norican|Fenix|Headland+One|Holtwood+One+SC|Ovo|Marcellus|Sanchez|Alegreya+SC' %>
 
 
     <%# Modernizr is required for Zurb Foundation %>
     <%= javascript_include_tag 'vendor/modernizr' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application' %>
     
     <%= csrf_meta_tags %>
   </head>
