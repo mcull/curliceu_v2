@@ -44,6 +44,14 @@ def create
 
   @order.save
 
+  ses = AWS::SimpleEmailService.new
+  ses.send_email(
+  :subject => 'Curliceu Order ' + @order.id,
+  :from => 'admin@curlic.eu',
+  :to => 'printing@curlic.eu',
+  :body_text => 'Migrating email to Rails',
+  :body_html => '<h1>Migrating email to Rails</h1> In Progress')
+
 rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to charges_path

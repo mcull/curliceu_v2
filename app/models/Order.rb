@@ -1,7 +1,7 @@
 class Order
     include Dynamoid::Document
 
-    table :name => :curliceu_orders, :key => :id, :read_capacity => 400, :write_capacity => 400
+    table :name => :orders, :key => :id, :read_capacity => 400, :write_capacity => 400
 
     field :id
     field :order_date, :datetime

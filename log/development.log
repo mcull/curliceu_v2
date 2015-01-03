@@ -23547,3 +23547,1012 @@ Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for
 
 
 Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 03:06:05 -0500
+[AWS DynamoDB 200 0.379416 0 retries] list_tables()  
+
+(394.14 ms) LIST TABLES - [[]]
+(394.25 ms) CACHE TABLES
+
+
+Started GET "/" for ::1 at 2015-01-03 12:41:58 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 693ms (Views: 693.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/application-7cf49bf2ad59db08c91e9c2f359f65fc.css?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/charges-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/Hannah_web-6e132a656e22b67a9c2abfe19c1a6ccd.jpg" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/Elizabeth_web-d36bfba3ebe668a2f38888f5704c6a37.jpg" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/Kaylee_web-1531d5aca46c1f78d5d7ba4a70f9c93d.jpg" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/Madison_web-2f7e3a183216b5fdb9e1edc9bbe10285.jpg" for ::1 at 2015-01-03 12:41:59 -0500
+
+
+Started GET "/assets/wolf_in_the_city-webfont-67ffb77552a6d6cbf58e0986342436e3.woff2" for ::1 at 2015-01-03 12:42:00 -0500
+
+
+Started GET "/assets/impregnable_personal_use_only-webfont-dad3d0ddb1819febed00909e4664c5fa.woff2" for ::1 at 2015-01-03 12:42:00 -0500
+
+
+Started GET "/assets/vonfont-webfont-e2caebc00e32ca4ce4cfc2d2e42bb298.woff2" for ::1 at 2015-01-03 12:42:00 -0500
+
+
+Started GET "/assets/alfaslabone-regular-webfont-9f2b78e8ffc6cc056e3882ee17e6b265.woff2" for ::1 at 2015-01-03 12:42:00 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-03 12:42:32 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RpaaZkx05m6be", "price"=>"5000", "material"=>"Pink Passion Acrylic ", "text"=>"Wolfgang", "font"=>"vonfontregular"}
+[AWS DynamoDB 200 0.271821 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.087039 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420306954.438951"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"vonfontregular"},"id"=>{:s=>"ch_5Rpa329vaV4y1V.169"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Pink Passion Acrylic "},"order_date"=>{:n=>"1420306954.428115"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420306954.4391758"}},:table_name=>"curliceu_orders")  
+
+(375.67 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420306954.438951, :updated_at=>1420306954.4391758, :id=>"ch_5Rpa329vaV4y1V.169", :order_date=>1420306954.428115, :amount=>50, :text=>"Wolfgang", :font=>"vonfontregular", :material=>"Pink Passion Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered charges/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2352ms (Views: 190.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-7cf49bf2ad59db08c91e9c2f359f65fc.css?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/charges-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 12:42:35 -0500
+
+
+Started GET "/assets/application-7cf49bf2ad59db08c91e9c2f359f65fc.css?body=1" for ::1 at 2015-01-03 12:43:24 -0500
+
+
+Started GET "/assets/charges-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:43:24 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 12:43:24 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 12:43:24 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 12:43:24 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:43:24 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 12:43:24 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 12:43:24 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-03 12:44:43 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RpaaZkx05m6be", "price"=>"5000", "material"=>"Pink Passion Acrylic ", "text"=>"Wolfgang", "font"=>"vonfontregular"}
+Completed 500 Internal Server Error in 546ms
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_5RpaaZkx05m6be):
+  app/controllers/charges_controller.rb:8:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (58.5ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-03 12:45:08 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RpcTsiivRc6Vk", "price"=>"7000", "material"=>"Yellowheart Wood ", "text"=>"Wolfgang", "font"=>"Lily-Script One"}
+[AWS DynamoDB 200 0.281217 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420307110.641875"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Lily-Script One"},"id"=>{:s=>"ch_5RpcqiiPHWLNJ8.177"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Yellowheart Wood "},"order_date"=>{:n=>"1420307110.641291"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420307110.642098"}},:table_name=>"curliceu_orders")  
+
+(282.59 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420307110.641875, :updated_at=>1420307110.642098, :id=>"ch_5RpcqiiPHWLNJ8.177", :order_date=>1420307110.641291, :amount=>70, :text=>"Wolfgang", :font=>"Lily-Script One", :material=>"Yellowheart Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered charges/create.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 2130ms (Views: 181.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-7cf49bf2ad59db08c91e9c2f359f65fc.css?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/charges-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 12:45:11 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-03 12:49:37 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RpcTsiivRc6Vk", "price"=>"7000", "material"=>"Yellowheart Wood ", "text"=>"Wolfgang", "font"=>"Lily-Script One"}
+Completed 500 Internal Server Error in 584ms
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_5RpcTsiivRc6Vk):
+  app/controllers/charges_controller.rb:8:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (59.5ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-03 12:49:57 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RphetS31TKSYu", "price"=>"7000", "material"=>"Zebrawood Wood ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.335606 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420307399.405618"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5RphH1itrWk5Z7.185"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Zebrawood Wood "},"order_date"=>{:n=>"1420307399.4050848"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420307399.406305"}},:table_name=>"curliceu_orders")  
+
+(337.04 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420307399.405618, :updated_at=>1420307399.406305, :id=>"ch_5RphH1itrWk5Z7.185", :order_date=>1420307399.4050848, :amount=>70, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Zebrawood Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered charges/create.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2667ms (Views: 287.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-c90f36e211169aed47f8e95813f336f6.css?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/charges-783beb9c66dabd44128646fd7c206b7c.css?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 12:50:00 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-03 12:51:00 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RpiGWaFCvQGvS", "price"=>"5000", "material"=>"Pink Passion Acrylic ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.322052 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420307462.0714822"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5RpikfvGCFQc0q.177"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Pink Passion Acrylic "},"order_date"=>{:n=>"1420307462.0708091"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420307462.0717912"}},:table_name=>"curliceu_orders")  
+
+(323.28 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420307462.0714822, :updated_at=>1420307462.0717912, :id=>"ch_5RpikfvGCFQc0q.177", :order_date=>1420307462.0708091, :amount=>50, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Pink Passion Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered charges/create.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2436ms (Views: 251.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-29a2bf10e4dc3eab84e601e2b37496f6.css?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/charges-0b60477ab9db078a06b90eb0cb652e92.css?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 12:51:02 -0500
+
+
+Started GET "/assets/wolf_in_the_city-webfont-67ffb77552a6d6cbf58e0986342436e3.woff2" for ::1 at 2015-01-03 12:52:18 -0500
+
+
+Started GET "/assets/impregnable_personal_use_only-webfont-dad3d0ddb1819febed00909e4664c5fa.woff2" for ::1 at 2015-01-03 12:52:18 -0500
+
+
+Started GET "/assets/vonfont-webfont-e2caebc00e32ca4ce4cfc2d2e42bb298.woff2" for ::1 at 2015-01-03 12:52:18 -0500
+
+
+Started GET "/assets/alfaslabone-regular-webfont-9f2b78e8ffc6cc056e3882ee17e6b265.woff2" for ::1 at 2015-01-03 12:52:18 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-03 12:52:24 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RpkWWZcvVvtbO", "price"=>"7000", "material"=>"Zebrawood Wood ", "text"=>"Wolfgang", "font"=>"Lily-Script One"}
+[AWS DynamoDB 200 0.265502 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420307546.2436218"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Lily-Script One"},"id"=>{:s=>"ch_5RpkhFaMvij9R9.178"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Zebrawood Wood "},"order_date"=>{:n=>"1420307546.2425869"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420307546.243911"}},:table_name=>"curliceu_orders")  
+
+(266.96 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420307546.2436218, :updated_at=>1420307546.243911, :id=>"ch_5RpkhFaMvij9R9.178", :order_date=>1420307546.2425869, :amount=>70, :text=>"Wolfgang", :font=>"Lily-Script One", :material=>"Zebrawood Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered charges/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1881ms (Views: 271.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-5174e29a1d635077c8941ebfcfc01310.css?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/charges-f3e40dc1547b6a7f23b8b48e0b87bad3.css?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 12:52:26 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 12:52:27 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 12:52:27 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-03 12:53:08 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RpkYBVeo1NCmR", "price"=>"7000", "material"=>"Padauk Wood ", "text"=>"Wolfgang", "font"=>"Yellowtail"}
+[AWS DynamoDB 200 0.269898 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420307590.4788249"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Yellowtail"},"id"=>{:s=>"ch_5RpkZnAATYxZy0.195"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Padauk Wood "},"order_date"=>{:n=>"1420307590.4783082"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420307590.479021"}},:table_name=>"curliceu_orders")  
+
+(271.13 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420307590.4788249, :updated_at=>1420307590.479021, :id=>"ch_5RpkZnAATYxZy0.195", :order_date=>1420307590.4783082, :amount=>70, :text=>"Wolfgang", :font=>"Yellowtail", :material=>"Padauk Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered charges/create.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2242ms (Views: 264.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/charges-1cdcdf7f0bb8c20951c6e855125dbe94.css?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/application-01c23a68871f15e61e1c6f3a502fa282.css?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 12:53:11 -0500
+[AWS DynamoDB 200 0.386214 0 retries] list_tables()  
+
+(400.4 ms) LIST TABLES - [[]]
+(400.48 ms) CACHE TABLES
+
+
+Started POST "/charges" for ::1 at 2015-01-03 13:04:42 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RpwkeVJtQzqhi", "price"=>"5000", "material"=>"Rain Drop Acrylic ", "text"=>"Wolfgang", "font"=>"Oleo-Script Swash Caps"}
+[AWS DynamoDB 200 0.255073 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420308284.128763"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Oleo-Script Swash Caps"},"id"=>{:s=>"ch_5RpwbFJ31WFgxR.137"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Rain Drop Acrylic "},"order_date"=>{:n=>"1420308284.128243"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420308284.1289291"}},:table_name=>"curliceu_orders")  
+
+(256.23 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420308284.128763, :updated_at=>1420308284.1289291, :id=>"ch_5RpwbFJ31WFgxR.137", :order_date=>1420308284.128243, :amount=>50, :text=>"Wolfgang", :font=>"Oleo-Script Swash Caps", :material=>"Rain Drop Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+Completed 500 Internal Server Error in 2209ms
+
+NameError (undefined local variable or method `ses' for #<ChargesController:0x007ffef59a81b0>):
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (73.5ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-03 13:05:57 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RpxT2wP7LaZa9", "price"=>"7000", "material"=>"Wenge Wood ", "text"=>"Wolfgang", "font"=>"Pacifico"}
+[AWS DynamoDB 200 0.274177 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420308359.69763"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Pacifico"},"id"=>{:s=>"ch_5RpxkH7hH9VVvE.106"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Wenge Wood "},"order_date"=>{:n=>"1420308359.697261"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420308359.6977751"}},:table_name=>"curliceu_orders")  
+
+(275.4 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420308359.69763, :updated_at=>1420308359.6977751, :id=>"ch_5RpxkH7hH9VVvE.106", :order_date=>1420308359.697261, :amount=>70, :text=>"Wolfgang", :font=>"Pacifico", :material=>"Wenge Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+[AWS SimpleEmailService 200 0.921745 0 retries] send_email(:destination=>{:to_addresses=>["printing@curlic.eu"]},:message=>{:body=>{:html=>{:data=>"<h1>Migrating email to Rails</h1> In Progress"},:text=>{:data=>"Migrating email to Rails"}},:subject=>{:data=>"Curliceu Order ch_5RpxkH7hH9VVvE"}},:source=>"admin@curlic.eu")  
+
+  Rendered charges/create.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3157ms (Views: 200.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500

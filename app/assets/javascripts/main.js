@@ -337,8 +337,8 @@ var guid;
         }
       });
 
-      Stripe.setPublishableKey('pk_KQRNE2GSoOaT98EX7AFRZ34J37wzk');
-      //Stripe.setPublishableKey('pk_VpNFyzG0XC2rL0pV1QlDvQ3rCUSea');
+      //Stripe.setPublishableKey('pk_KQRNE2GSoOaT98EX7AFRZ34J37wzk');
+      Stripe.setPublishableKey('pk_VpNFyzG0XC2rL0pV1QlDvQ3rCUSea');
 
 
         var stripeResponseHandler = function(status, response) {
