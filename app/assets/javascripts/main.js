@@ -13,7 +13,7 @@ var guid;
 
     function checkChar(event) {
       var key = event.keyCode;
-      var isAlpha =  ((key >= 65 && key <= 90) 
+      var isAlpha =  ((key >= 65 && key <= 90)
           || key == 8
           || (key >= 37 && key <= 40)
           );
@@ -22,8 +22,8 @@ var guid;
       if (!isAlpha) {
        $("#nameError").html("Only letters allowed!");
        $("#nameError").show();
-      } else if   (key != 8 
-              &&  (key < 37 || key > 40) 
+      } else if   (key != 8
+              &&  (key < 37 || key > 40)
               && (len + 1) > 10) {
         tooLong = true;
         $("#nameError").html("Max 10 letters allowed!");
@@ -86,7 +86,7 @@ var guid;
       var retVal = 0;
       if ($("input[type='radio'][name='chainLength']:checked").val() == "24") {
         retVal = 5;
-      } 
+      }
       return retVal;
     }
 
@@ -115,8 +115,8 @@ var guid;
     function updateOrderTotal() {
       var total =  getTotal();
       if (discount > 0){
-        $("#orderTotal").html("<span style='color:red;text-decoration:line-through'>$" + 
-                              (total + discount) 
+        $("#orderTotal").html("<span style='color:red;text-decoration:line-through'>$" +
+                              (total + discount)
                               + "</span> $" + total);
       } else {
         $("#orderTotal").html("$" + total);
@@ -138,13 +138,13 @@ var guid;
         newText = (!name || name.length == 0) ? getNextPopularName() : name;
 //        newText = getNextPopularName();
         /*$.each($('.expanded'),function(index,val) {
-              $(val).click();      
+              $(val).click();
           });*/
 
       } else {
         $("#scripts").css("color","#303030").css("opacity",".8");
         //$(".styleHead").show();
-        
+
       }
       if (newText.length > 8) {
         newSize = 32-(4*(newText.length - 8));
@@ -161,7 +161,7 @@ var guid;
               scrollTop: $("#styleHeader").offset().top -25
             }, 1000);
      }
-      //$(document).scrollTop( $("#styleHeader").offset().top ); 
+      //$(document).scrollTop( $("#styleHeader").offset().top );
     }
 
       $(document).foundation({
@@ -175,7 +175,7 @@ var guid;
           timer:true,
           resume_on_mouseout:true
         }
-      });  
+      });
 
       $(document).ready(function() {
         $.getJSON( "fonts.json", function( data ) {
@@ -183,20 +183,20 @@ var guid;
           initApp();
         });
       });
-      
+
       function initApp() {
- 
+
         $.each(fonts,function(index,val) {
           var id = val.name.replace(" ", "-");
           var fontSpacing = "";
 
-          var scriptDiv = "<div  id='" 
-                          + id 
+          var scriptDiv = "<div  id='"
+                          + id
                           + "' class='preview large-4 medium-4 small-6 columns";
           if (val.class) {
-            scriptDiv     += " " 
+            scriptDiv     += " "
                           + val.class
-                          
+
           }
           scriptDiv       += "' "
                           + "style='font-family:\""
@@ -243,11 +243,11 @@ var guid;
             $('html,body').animate({
               scrollTop: $("#materialHeader").offset().top - 25
             }, 1000);
-            
+
             var chosenFont = getFontByName($(this).attr('id').replace("-"," "));
             var imagePreviewUrl =  "https://www.curlic.eu/namesvg/?text=" +
                                 $(this).html() +
-                                "&font=" + 
+                                "&font=" +
                                 chosenFont.ttfName +
                                 "&stroke=" +
                                 ((chosenFont.stroke && chosenFont.stroke.length > 0) ? chosenFont.stroke : "") +
@@ -314,11 +314,11 @@ var guid;
           if ($("#name").val().length ==0) {
             //$(".dynamic").hide();
             refreshExamples();
-          } 
+          }
         });
 
         $("input[name=chainLength]:radio").change(function () {
-          
+
           updateOrderTotal();
           updateOrderSubTotal();
         });
@@ -337,7 +337,9 @@ var guid;
         }
       });
 
-      Stripe.setPublishableKey('pk_KQRNE2GSoOaT98EX7AFRZ34J37wzk');
+      //Stripe.setPublishableKey('pk_KQRNE2GSoOaT98EX7AFRZ34J37wzk');
+      Stripe.setPublishableKey('pk_VpNFyzG0XC2rL0pV1QlDvQ3rCUSea');
+
 
         var stripeResponseHandler = function(status, response) {
           var $form = $('#payment-form');
@@ -375,5 +377,3 @@ var guid;
         });
       });
   }
-
-
