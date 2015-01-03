@@ -23385,3 +23385,7 @@ Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body
 
 
 Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 02:35:48 -0500
+[AWS DynamoDB 200 0.341284 0 retries] list_tables()  
+
+(357.11 ms) LIST TABLES - [[]]
+(357.19 ms) CACHE TABLES

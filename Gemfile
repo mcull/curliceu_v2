@@ -1,3 +1,4 @@
+source 'https://code.stripe.com'
 source 'https://rubygems.org'
 
 
@@ -26,7 +27,7 @@ gem 'foundation-rails'
 
 gem 'simple_form'
 
-gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'stripe'
 gem 'aws-sdk-v1'
 gem 'dynamoid'
 
