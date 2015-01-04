@@ -4,7 +4,7 @@ class NamesvgController < ApplicationController
     params.each do |key, value|
       path += key + "=" + value + "&"
     end
-    url = URI.parse(path)
+    url = URI.parse(URI.encode(path))
     result = Net::HTTP.get_response(url)
     send_data result.body, :type => result.content_type, :disposition => 'inline'
   end
