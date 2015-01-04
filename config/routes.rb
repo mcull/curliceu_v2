@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :charges
 
+  get "namesvg" => "namesvg#get", :as => "namesvg" 
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

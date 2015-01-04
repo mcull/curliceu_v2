@@ -13,26 +13,25 @@ var guid;
 
     function checkChar(event) {
       var key = event.keyCode;
-      var isAlpha =  ((key >= 65 && key <= 90)
-          || key == 8
-          || (key >= 37 && key <= 40)
-          );
+      var isOk =  key <= 46 || (key >= 65 && key <= 90);
       var len = $("#name").val().length;
       var tooLong = false;
-      if (!isAlpha) {
-       $("#nameError").html("Only letters allowed!");
-       $("#nameError").show();
-      } else if   (key != 8
-              &&  (key < 37 || key > 40)
-              && (len + 1) > 10) {
-        tooLong = true;
-        $("#nameError").html("Max 10 letters allowed!");
+      if (!isOk) {
+        $("#nameError").html("Only letters allowed!");
         $("#nameError").show();
-      } else {
-        $("#nameError").hide();
-      }
-      return isAlpha;
-    };
+
+      } else if   (key != 8
+        &&  key != 13
+        &&  (key < 37 || key > 40)
+        && (len + 1) > 10) {
+          tooLong = true;
+          $("#nameError").html("Max 10 letters allowed!");
+          $("#nameError").show();
+        } else {
+          $("#nameError").hide();
+        }
+        return isOk;
+      };
 
     function SVG(tag) {
        return document.createElementNS('http://www.w3.org/2000/svg', tag);
@@ -245,20 +244,21 @@ var guid;
             }, 1000);
 
             var chosenFont = getFontByName($(this).attr('id').replace("-"," "));
-            var imagePreviewUrl =  "https://www.curlic.eu/namesvg/?text=" +
-                                $(this).html() +
-                                "&font=" +
-                                chosenFont.ttfName +
-                                "&stroke=" +
-                                ((chosenFont.stroke && chosenFont.stroke.length > 0) ? chosenFont.stroke : "") +
-                                "&spacing=" +
-                                ((chosenFont.spacing && chosenFont.spacing.length > 0) ? chosenFont.spacing : "")
-                                "&size=" +
-                                ((chosenFont.size && chosenFont.size.length > 0) ? chosenFont.size : "")
-                                "&t=" +
-                                ((chosenFont.top && chosenFont.top.length > 0) ? chosenFont.top : "")
-                                "&l=" +
-                               ((chosenFont.left && chosenFont.left.length > 0) ? chosenFont.left : "")
+            var imagePreviewUrl =  "/namesvg/?text=" +
+            $(this).html() +
+            "&font=" +
+            chosenFont.ttfName +
+            "&stroke=" +
+            ((chosenFont.stroke && chosenFont.stroke.length > 0) ? chosenFont.stroke : "") +
+            "&spacing=" +
+            ((chosenFont.spacing && chosenFont.spacing.length > 0) ? chosenFont.spacing : "") +
+            "&size=" +
+            ((chosenFont.size && chosenFont.size.length > 0) ? chosenFont.size : "") +
+            "&t=" +
+            ((chosenFont.top && chosenFont.top.length > 0) ? chosenFont.top : "") +
+            "&l=" +
+            ((chosenFont.left && chosenFont.left.length > 0) ? chosenFont.left : "");
+
             $("#orderName").html("<img src='" + imagePreviewUrl + "'>");
             if ($(".chosenMaterial").length > 0 && $(".selectedScript").length > 0) {
               updateOrderSubTotal();
