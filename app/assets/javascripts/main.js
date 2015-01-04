@@ -337,8 +337,7 @@ var guid;
         }
       });
 
-      //Stripe.setPublishableKey('pk_KQRNE2GSoOaT98EX7AFRZ34J37wzk');
-      Stripe.setPublishableKey('pk_VpNFyzG0XC2rL0pV1QlDvQ3rCUSea');
+      Stripe.setPublishableKey('<%= ENV['PUBLISHABLE_KEY']%>');
 
 
         var stripeResponseHandler = function(status, response) {
@@ -352,11 +351,12 @@ var guid;
             // token contains id, last4, and card type
             var token = response.id;
             // Insert the token into the form so it gets submitted to the server
+            var fontName = getFontByName($(".selectedScript").first().attr("id")).ttfName;
             $form.append($('<input type="hidden" name="stripeToken" />').val(token));
             $form.append($('<input type="hidden" name="price" />').val(parseInt(getTotal()) * 100));
             $form.append($('<input type="hidden" name="material" />').val(getMaterialName($(".chosenMaterial").first())));
             $form.append($('<input type="hidden" name="text" />').val($("#name").val()));
-            $form.append($('<input type="hidden" name="font" />').val($(".selectedScript").first().attr("id")));
+            $form.append($('<input type="hidden" name="font" />').val(fontName));
 
             // and re-submit
             $form.get(0).submit();
