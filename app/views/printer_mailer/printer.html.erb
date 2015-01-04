@@ -1,0 +1,29 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    <%= @order.id %>
+    <p>
+    <b>Text</b><br>
+    <%= @order.text %>
+    <p>
+    <b>Font</b><br>
+    <%= @order.font %>
+    <p>
+    <b>Material</b><br>
+    <%= @order.material %>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    <%= @order.shippingMethod %>
+    <p>
+    <b>Customer contact</b><br>
+    email: <%= @order.customerEmail %><br>
+    sms: <%= @order.customerSms %><br>
+    <p>
+    <b>Shipping Address</b>
+    <%= @order.shipName %><br>
+    <%= @order.shipAddress1 %> <%= @order.shipAddress2 %><br>
+    <%= @order.shipCity %>, <%= @order.shipState %> <%= @order.shipZip %><br>
+  </body>
+</html>

@@ -24556,3 +24556,3272 @@ Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for
 
 
 Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 13:06:01 -0500
+[AWS DynamoDB 200 0.262944 0 retries] list_tables()  
+
+(280.03 ms) LIST TABLES - [[]]
+(280.12 ms) CACHE TABLES
+[AWS DynamoDB 200 0.22014 0 retries] list_tables()  
+
+(227.8 ms) LIST TABLES - [[]]
+(227.88 ms) CACHE TABLES
+
+
+Started POST "/charges" for ::1 at 2015-01-03 14:59:31 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5Rrn7ebR5DgLiu", "price"=>"7000", "material"=>"Padauk Wood ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.276723 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.086358 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420315173.751793"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5Rrn8EIN8kPNTU.147"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Padauk Wood "},"order_date"=>{:n=>"1420315173.7410471"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420315173.7520452"}},:table_name=>"curliceu_orders")  
+
+(387.43 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420315173.751793, :updated_at=>1420315173.7520452, :id=>"ch_5Rrn8EIN8kPNTU.147", :order_date=>1420315173.7410471, :amount=>70, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Padauk Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /Users/marc/Projects/cc_v2/app/controllers/charges_controller.rb:47)
+  Rendered printer_mailer/printer.html (1.6ms)
+
+PrinterMailer#printer: processed outbound mail in 257.4ms
+
+Sent mail to printer@curlic.eu (1698.1ms)
+Date: Sat, 03 Jan 2015 14:59:34 -0500
+From: admin@curlic.eu
+To: printer@curlic.eu
+Message-ID: <54a84a2664eb7_106c83fdd3fa758583202e@Marcs-MacBook-Pro.local.mail>
+Subject: Emailed from AmazonSES!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+  Rendered charges/create.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4543ms (Views: 427.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 14:59:36 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-03 15:01:40 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RrpfdXQSOZvJz", "price"=>"5000", "material"=>"Gold Acrylic ", "text"=>"Wolfgang", "font"=>"Oleo-Script Swash Caps"}
+[AWS DynamoDB 200 0.379813 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420315302.1945212"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Oleo-Script Swash Caps"},"id"=>{:s=>"ch_5RrpYpTQU081RF.98"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Gold Acrylic "},"order_date"=>{:n=>"1420315302.194012"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420315302.195215"}},:table_name=>"curliceu_orders")  
+
+(380.81 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420315302.1945212, :updated_at=>1420315302.195215, :id=>"ch_5RrpYpTQU081RF.98", :order_date=>1420315302.194012, :amount=>50, :text=>"Wolfgang", :font=>"Oleo-Script Swash Caps", :material=>"Gold Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /Users/marc/Projects/cc_v2/app/controllers/charges_controller.rb:47)
+  Rendered printer_mailer/printer.html.erb (0.5ms)
+  Rendered printer_mailer/printer.html (0.4ms)
+
+PrinterMailer#printer: processed outbound mail in 25.0ms
+
+Sent mail to printer@curlic.eu (1707.2ms)
+Date: Sat, 03 Jan 2015 15:01:42 -0500
+From: admin@curlic.eu
+To: printer@curlic.eu
+Message-ID: <54a84aa693b2f_106c83fdd4114ee6c322d1@Marcs-MacBook-Pro.local.mail>
+Subject: Emailed from AmazonSES!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a84aa69286f_106c83fdd4114ee6c321f6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a84aa69286f_106c83fdd4114ee6c321f6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a84aa69286f_106c83fdd4114ee6c321f6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a84aa69286f_106c83fdd4114ee6c321f6--
+
+  Rendered charges/create.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3684ms (Views: 203.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 15:01:44 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-03 15:06:44 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RruatI6HOePsd", "price"=>"7000", "material"=>"Yellowheart Wood ", "text"=>"Wolfgang", "font"=>"Pacifico"}
+[AWS DynamoDB 200 0.27815 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420315607.4159691"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Pacifico"},"id"=>{:s=>"ch_5RruEehrgK8TaD.110"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Yellowheart Wood "},"order_date"=>{:n=>"1420315607.415479"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420315607.416123"}},:table_name=>"curliceu_orders")  
+
+(279.24 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420315607.4159691, :updated_at=>1420315607.416123, :id=>"ch_5RruEehrgK8TaD.110", :order_date=>1420315607.415479, :amount=>70, :text=>"Wolfgang", :font=>"Pacifico", :material=>"Yellowheart Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from create at /Users/marc/Projects/cc_v2/app/controllers/charges_controller.rb:47)
+  Rendered printer_mailer/printer.html.erb (0.3ms)
+  Rendered printer_mailer/printer.html (0.4ms)
+  Rendered printer_mailer/printer.text.erb (0.4ms)
+
+PrinterMailer#printer: processed outbound mail in 28.7ms
+
+Sent mail to printing@curlic.eu (1711.1ms)
+Date: Sat, 03 Jan 2015 15:06:47 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a84bd7b3271_106c83fdd3dca365432419@Marcs-MacBook-Pro.local.mail>
+Subject: Emailed from AmazonSES!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a84bd7b1e9f_106c83fdd3dca36543236";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a84bd7b1e9f_106c83fdd3dca36543236
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a84bd7b1e9f_106c83fdd3dca36543236
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a84bd7b1e9f_106c83fdd3dca36543236
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a84bd7b1e9f_106c83fdd3dca36543236--
+
+  Rendered charges/create.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4608ms (Views: 178.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 15:06:49 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-03 15:09:11 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5RrwihZugs7PGd", "price"=>"5000", "material"=>"Gold Acrylic ", "text"=>"Wolfgang", "font"=>"impregnable_personal_use_onRg"}
+[AWS DynamoDB 200 0.287765 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420315754.0356328"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"impregnable_personal_use_onRg"},"id"=>{:s=>"ch_5Rrw04lcDOk8wf.55"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Gold Acrylic "},"order_date"=>{:n=>"1420315754.035273"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420315754.035815"}},:table_name=>"curliceu_orders")  
+
+(288.81 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420315754.0356328, :updated_at=>1420315754.035815, :id=>"ch_5Rrw04lcDOk8wf.55", :order_date=>1420315754.035273, :amount=>50, :text=>"Wolfgang", :font=>"impregnable_personal_use_onRg", :material=>"Gold Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (0.1ms)
+  Rendered printer_mailer/printer.html (0.0ms)
+  Rendered printer_mailer/printer.text.erb (0.1ms)
+
+PrinterMailer#printer: processed outbound mail in 27.2ms
+
+Sent mail to printing@curlic.eu (2131.8ms)
+Date: Sat, 03 Jan 2015 15:09:14 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a84c6a5817a_106c83fdd3dea6b54326b2@Marcs-MacBook-Pro.local.mail>
+Subject: Emailed from AmazonSES!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a84c6a56b98_106c83fdd3dea6b54325dc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a84c6a56b98_106c83fdd3dea6b54325dc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a84c6a56b98_106c83fdd3dea6b54325dc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a84c6a56b98_106c83fdd3dea6b54325dc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a84c6a56b98_106c83fdd3dea6b54325dc--
+
+  Rendered charges/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4854ms (Views: 230.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 15:09:16 -0500
+[AWS DynamoDB 200 0.280408 0 retries] list_tables()  
+
+(295.11 ms) LIST TABLES - [[]]
+(295.2 ms) CACHE TABLES
+[AWS DynamoDB 200 0.251797 0 retries] list_tables()  
+
+(264.75 ms) LIST TABLES - [[]]
+(264.84 ms) CACHE TABLES
+
+
+Started POST "/charges" for ::1 at 2015-01-03 15:15:38 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5Rs3lSgjPbHl8e", "price"=>"5000", "material"=>"Pink Passion Acrylic ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.22606 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.076562 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420316141.329094"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5Rs3fKupg6ISX9.128"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Pink Passion Acrylic "},"order_date"=>{:n=>"1420316141.317858"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420316141.3294451"}},:table_name=>"curliceu_orders")  
+
+(326.79 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420316141.329094, :updated_at=>1420316141.3294451, :id=>"ch_5Rs3fKupg6ISX9.128", :order_date=>1420316141.317858, :amount=>50, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Pink Passion Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (1.7ms)
+  Rendered printer_mailer/printer.html (0.3ms)
+  Rendered printer_mailer/printer.text.erb (0.6ms)
+
+PrinterMailer#printer: processed outbound mail in 207.2ms
+
+Sent mail to printing@curlic.eu (2193.1ms)
+Date: Sat, 03 Jan 2015 15:15:41 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a84dedd8d0b_106f63fe4ed4441b874195@Marcs-MacBook-Pro.local.mail>
+Subject: Emailed from AmazonSES!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a84dedd6be2_106f63fe4ed4441b87406b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a84dedd6be2_106f63fe4ed4441b87406b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a84dedd6be2_106f63fe4ed4441b87406b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a84dedd6be2_106f63fe4ed4441b87406b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a84dedd6be2_106f63fe4ed4441b87406b--
+
+  Rendered charges/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5741ms (Views: 463.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-03 15:15:44 -0500
+[AWS DynamoDB 200 0.293598 0 retries] list_tables()  
+
+(309.82 ms) LIST TABLES - [[]]
+(309.9 ms) CACHE TABLES
+[AWS DynamoDB 200 0.224313 0 retries] list_tables()  
+
+(231.97 ms) LIST TABLES - [[]]
+(232.05 ms) CACHE TABLES
+
+
+Started POST "/charges" for ::1 at 2015-01-04 08:54:36 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S98PhQNfYkJWw", "price"=>"5000", "material"=>"Citrus Acrylic ", "text"=>"Wolfgang", "font"=>"Slackey"}
+[AWS DynamoDB 200 0.243983 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.074958 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420379678.6752372"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Slackey"},"id"=>{:s=>"ch_5S98z31Wm7CohM.62"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Citrus Acrylic "},"order_date"=>{:n=>"1420379678.6703072"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420379678.675851"}},:table_name=>"curliceu_orders")  
+
+(351.13 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420379678.6752372, :updated_at=>1420379678.675851, :id=>"ch_5S98z31Wm7CohM.62", :order_date=>1420379678.6703072, :amount=>50, :text=>"Wolfgang", :font=>"Slackey", :material=>"Citrus Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (1.4ms)
+  Rendered printer_mailer/printer.html (0.2ms)
+  Rendered printer_mailer/printer.text.erb (0.3ms)
+
+PrinterMailer#printer: processed outbound mail in 214.6ms
+
+Sent mail to printing@curlic.eu (1861.4ms)
+Date: Sun, 04 Jan 2015 08:54:39 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a9461f3ee8b_107783febf39d415c739d4@Marcs-MacBook-Pro.local.mail>
+Subject: Emailed from AmazonSES!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a9461f3cdcd_107783febf39d415c738ab";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a9461f3cdcd_107783febf39d415c738ab
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a9461f3cdcd_107783febf39d415c738ab
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a9461f3cdcd_107783febf39d415c738ab
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a9461f3cdcd_107783febf39d415c738ab--
+
+  Rendered charges/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5012ms (Views: 478.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-04 08:54:41 -0500
+[AWS DynamoDB 200 0.27583 0 retries] list_tables()  
+
+(287.25 ms) LIST TABLES - [[]]
+(287.4 ms) CACHE TABLES
+[AWS DynamoDB 200 0.244358 0 retries] list_tables()  
+
+(253.74 ms) LIST TABLES - [[]]
+(253.82 ms) CACHE TABLES
+[AWS DynamoDB 200 0.21987 0 retries] list_tables()  
+
+(226.91 ms) LIST TABLES - [[]]
+(226.98 ms) CACHE TABLES
+
+
+Started POST "/charges" for ::1 at 2015-01-04 08:59:44 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9DW1p3qP9sIy", "price"=>"7000", "material"=>"Zebrawood Wood ", "text"=>"Wolfgang", "font"=>"Yellowtail"}
+[AWS DynamoDB 200 0.272353 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.074917 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420379987.702228"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Yellowtail"},"id"=>{:s=>"ch_5S9DFwdhowl0b5.113"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Zebrawood Wood "},"order_date"=>{:n=>"1420379987.699875"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420379987.702605"}},:table_name=>"curliceu_orders")  
+
+(357.61 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420379987.702228, :updated_at=>1420379987.702605, :id=>"ch_5S9DFwdhowl0b5.113", :order_date=>1420379987.699875, :amount=>70, :text=>"Wolfgang", :font=>"Yellowtail", :material=>"Zebrawood Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (1.3ms)
+  Rendered printer_mailer/printer.html (0.3ms)
+  Rendered printer_mailer/printer.text.erb (0.4ms)
+
+PrinterMailer#printer: processed outbound mail in 177.2ms
+
+Sent mail to printing@curlic.eu (1897.8ms)
+Date: Sun, 04 Jan 2015 08:59:48 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a947543ee1e_1078f3fd86eb30034947e9@Marcs-MacBook-Pro.local.mail>
+Subject: Emailed from AmazonSES!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a947543d16f_1078f3fd86eb30034946cb";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a947543d16f_1078f3fd86eb30034946cb
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a947543d16f_1078f3fd86eb30034946cb
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a947543d16f_1078f3fd86eb30034946cb
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a947543d16f_1078f3fd86eb30034946cb--
+
+Completed 500 Internal Server Error in 5303ms
+
+Net::SMTPAuthenticationError (535 Authentication Credentials Invalid
+):
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (67.0ms)
+[AWS DynamoDB 200 0.239469 0 retries] list_tables()  
+
+(248.68 ms) LIST TABLES - [[]]
+(248.78 ms) CACHE TABLES
+[AWS DynamoDB 200 0.306409 0 retries] list_tables()  
+
+(316.36 ms) LIST TABLES - [[]]
+(316.45 ms) CACHE TABLES
+[AWS DynamoDB 200 0.220778 0 retries] list_tables()  
+
+(229.36 ms) LIST TABLES - [[]]
+(229.57 ms) CACHE TABLES
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:02:50 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9GDoYKtxob1L", "price"=>"7000", "material"=>"Zebrawood Wood ", "text"=>"Wolfgang", "font"=>"Pacifico"}
+[AWS DynamoDB 200 0.278793 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.073095 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420380172.642294"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Pacifico"},"id"=>{:s=>"ch_5S9GCIrI520Lc2.166"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Zebrawood Wood "},"order_date"=>{:n=>"1420380172.637608"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420380172.642643"}},:table_name=>"curliceu_orders")  
+
+(365.28 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420380172.642294, :updated_at=>1420380172.642643, :id=>"ch_5S9GCIrI520Lc2.166", :order_date=>1420380172.637608, :amount=>70, :text=>"Wolfgang", :font=>"Pacifico", :material=>"Zebrawood Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (1.1ms)
+  Rendered printer_mailer/printer.html (0.3ms)
+  Rendered printer_mailer/printer.text.erb (0.3ms)
+
+PrinterMailer#printer: processed outbound mail in 175.5ms
+
+Sent mail to printing@curlic.eu (1287.6ms)
+Date: Sun, 04 Jan 2015 09:02:53 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a9480d327ac_1079f3fcefc601250715d3@Marcs-MacBook-Pro.local.mail>
+Subject: Emailed from AmazonSES!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a9480d30ad2_1079f3fcefc6012507141a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a9480d30ad2_1079f3fcefc6012507141a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a9480d30ad2_1079f3fcefc6012507141a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a9480d30ad2_1079f3fcefc6012507141a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a9480d30ad2_1079f3fcefc6012507141a--
+
+  Rendered charges/create.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4546ms (Views: 377.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-04 09:02:54 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-04 09:02:54 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-04 09:02:54 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-04 09:02:54 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-04 09:02:54 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-04 09:02:54 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-04 09:02:54 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-04 09:02:54 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-04 09:02:55 -0500
+[AWS DynamoDB 200 0.225545 0 retries] list_tables()  
+
+(234.84 ms) LIST TABLES - [[]]
+(234.92 ms) CACHE TABLES
+[AWS DynamoDB 200 0.25283 0 retries] list_tables()  
+
+(262.27 ms) LIST TABLES - [[]]
+(262.39 ms) CACHE TABLES
+[AWS DynamoDB 200 0.253008 0 retries] list_tables()  
+
+(260.82 ms) LIST TABLES - [[]]
+(260.9 ms) CACHE TABLES
+
+
+Started GET "/charges" for ::1 at 2015-01-04 09:06:39 -0500
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ChargesController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/marc/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/marc/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/marc/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/unknown_action.html.erb within rescues/layout (1.3ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:06:51 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9KeG9PYEM1Tk", "price"=>"7000", "material"=>"Yellowheart Wood ", "text"=>"Wolfgang", "font"=>"impregnable_personal_use_onRg"}
+[AWS DynamoDB 200 0.25448 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.073484 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420380412.860766"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"impregnable_personal_use_onRg"},"id"=>{:s=>"ch_5S9K9hHkIbALIr.153"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Yellowheart Wood "},"order_date"=>{:n=>"1420380412.858755"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420380412.861129"}},:table_name=>"curliceu_orders")  
+
+(339.52 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420380412.860766, :updated_at=>1420380412.861129, :id=>"ch_5S9K9hHkIbALIr.153", :order_date=>1420380412.858755, :amount=>70, :text=>"Wolfgang", :font=>"impregnable_personal_use_onRg", :material=>"Yellowheart Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+Completed 500 Internal Server Error in 1980ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (71.8ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:08:07 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9LbIpxAVotn4", "price"=>"7000", "material"=>"Padauk Wood ", "text"=>"Wolfgang", "font"=>"impregnable_personal_use_onRg"}
+[AWS DynamoDB 200 0.285986 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420380489.657305"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"impregnable_personal_use_onRg"},"id"=>{:s=>"ch_5S9LEZfFQB7iaV.105"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Padauk Wood "},"order_date"=>{:n=>"1420380489.656767"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420380489.6576629"}},:table_name=>"curliceu_orders")  
+
+(287.31 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420380489.657305, :updated_at=>1420380489.6576629, :id=>"ch_5S9LEZfFQB7iaV.105", :order_date=>1420380489.656767, :amount=>70, :text=>"Wolfgang", :font=>"impregnable_personal_use_onRg", :material=>"Padauk Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+
+PrinterMailer#printer: processed outbound mail in 0.6ms
+Completed 500 Internal Server Error in 1912ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (62.3ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:08:51 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9MfBCh37A42I", "price"=>"5000", "material"=>"Gold Acrylic ", "text"=>"Wolfgang", "font"=>"Slackey"}
+[AWS DynamoDB 200 0.269967 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420380533.5865011"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Slackey"},"id"=>{:s=>"ch_5S9M61caI0KMp7.132"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Gold Acrylic "},"order_date"=>{:n=>"1420380533.586105"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420380533.5866702"}},:table_name=>"curliceu_orders")  
+
+(271.03 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420380533.5865011, :updated_at=>1420380533.5866702, :id=>"ch_5S9M61caI0KMp7.132", :order_date=>1420380533.586105, :amount=>50, :text=>"Wolfgang", :font=>"Slackey", :material=>"Gold Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (0.3ms)
+  Rendered printer_mailer/printer.html (0.4ms)
+  Rendered printer_mailer/printer.text.erb (0.3ms)
+
+PrinterMailer#printer: processed outbound mail in 175.1ms
+
+Sent mail to printing@curlic.eu (1111.8ms)
+Date: Sun, 04 Jan 2015 09:08:54 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a94976a6e6_108073fc4df82e29814666@Marcs-MacBook-Pro.local.mail>
+Subject: Order ch_5S9M61caI0KMp7
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a949768dfa_108073fc4df82e298145d6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a949768dfa_108073fc4df82e298145d6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a949768dfa_108073fc4df82e298145d6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a949768dfa_108073fc4df82e298145d6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a949768dfa_108073fc4df82e298145d6--
+
+  Rendered charges/create.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3651ms (Views: 376.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-04 09:08:55 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:19:51 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9X83GAkLx2eT", "price"=>"5000", "material"=>"Pink Passion Acrylic ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.341853 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381192.931618"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5S9XUlRBOtgYnW.62"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Pink Passion Acrylic "},"order_date"=>{:n=>"1420381192.9311948"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381192.931786"}},:table_name=>"curliceu_orders")  
+
+(342.98 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381192.931618, :updated_at=>1420381192.931786, :id=>"ch_5S9XUlRBOtgYnW.62", :order_date=>1420381192.9311948, :amount=>50, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Pink Passion Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (2.6ms)
+
+PrinterMailer#printer: processed outbound mail in 17.8ms
+Completed 500 Internal Server Error in 2120ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb___4468406096359986931_70114826045160'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (61.5ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:20:21 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9YbIhEmWU98F", "price"=>"5000", "material"=>"Gold Acrylic ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.278423 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381223.3408341"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5S9Yf76oo9q5Nt.55"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Gold Acrylic "},"order_date"=>{:n=>"1420381223.3403761"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381223.34098"}},:table_name=>"curliceu_orders")  
+
+(279.37 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381223.3408341, :updated_at=>1420381223.34098, :id=>"ch_5S9Yf76oo9q5Nt.55", :order_date=>1420381223.3403761, :amount=>50, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Gold Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (3.3ms)
+
+PrinterMailer#printer: processed outbound mail in 19.6ms
+Completed 500 Internal Server Error in 2062ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb___4468406096359986931_70114772316800'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (18.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (72.3ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:21:25 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9ZeBd4HeM8fx", "price"=>"7000", "material"=>"Wenge Wood ", "text"=>"Wolfgang", "font"=>"impregnable_personal_use_onRg"}
+[AWS DynamoDB 200 0.273806 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381287.234826"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"impregnable_personal_use_onRg"},"id"=>{:s=>"ch_5S9Zry2FNQ3CSN.153"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Wenge Wood "},"order_date"=>{:n=>"1420381287.234337"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381287.23506"}},:table_name=>"curliceu_orders")  
+
+(274.88 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381287.234826, :updated_at=>1420381287.23506, :id=>"ch_5S9Zry2FNQ3CSN.153", :order_date=>1420381287.234337, :amount=>70, :text=>"Wolfgang", :font=>"impregnable_personal_use_onRg", :material=>"Wenge Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (2.2ms)
+
+PrinterMailer#printer: processed outbound mail in 17.1ms
+Completed 500 Internal Server Error in 1976ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb___4468406096359986931_70114827800740'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (55.4ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:23:02 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9aGVuLyZYoYr", "price"=>"7000", "material"=>"Padauk Wood ", "text"=>"Wolfgang", "font"=>"Pacifico"}
+[AWS DynamoDB 200 0.350838 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381384.311875"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Pacifico"},"id"=>{:s=>"ch_5S9aagHtKytcy2.51"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Padauk Wood "},"order_date"=>{:n=>"1420381384.311263"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381384.312117"}},:table_name=>"curliceu_orders")  
+
+(351.74 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381384.311875, :updated_at=>1420381384.312117, :id=>"ch_5S9aagHtKytcy2.51", :order_date=>1420381384.311263, :amount=>70, :text=>"Wolfgang", :font=>"Pacifico", :material=>"Padauk Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (1.9ms)
+
+PrinterMailer#printer: processed outbound mail in 16.5ms
+Completed 500 Internal Server Error in 2158ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb___4468406096359986931_70114827800740'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (58.5ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:23:29 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9bVvoC8TrYXu", "price"=>"7000", "material"=>"Wenge Wood ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.263004 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381411.6470559"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5S9biyAoqryk8V.93"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Wenge Wood "},"order_date"=>{:n=>"1420381411.646723"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381411.6472"}},:table_name=>"curliceu_orders")  
+
+(263.91 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381411.6470559, :updated_at=>1420381411.6472, :id=>"ch_5S9biyAoqryk8V.93", :order_date=>1420381411.646723, :amount=>70, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Wenge Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (2.3ms)
+
+PrinterMailer#printer: processed outbound mail in 15.8ms
+Completed 500 Internal Server Error in 2031ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb___4468406096359986931_70114796242400'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (56.5ms)
+[AWS DynamoDB 200 0.24116 0 retries] list_tables()  
+
+(256.25 ms) LIST TABLES - [[]]
+(256.35 ms) CACHE TABLES
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:24:26 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9crLY5mqCdNI", "price"=>"7000", "material"=>"Padauk Wood ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.2672 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.078 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381468.494506"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5S9c7QJSfRF9Xt.48"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Padauk Wood "},"order_date"=>{:n=>"1420381468.4831538"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381468.4948711"}},:table_name=>"curliceu_orders")  
+
+(359.02 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381468.494506, :updated_at=>1420381468.4948711, :id=>"ch_5S9c7QJSfRF9Xt.48", :order_date=>1420381468.4831538, :amount=>70, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Padauk Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (6.7ms)
+
+PrinterMailer#printer: processed outbound mail in 36.2ms
+Completed 500 Internal Server Error in 2524ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb___3948833926310407226_70143704143800'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (55.1ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:26:39 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9e5vQdUsFwcK", "price"=>"5000", "material"=>"Rain Drop Acrylic ", "text"=>"Wolfgang", "font"=>"vonfontregular"}
+[AWS DynamoDB 200 0.260916 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381600.88358"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"vonfontregular"},"id"=>{:s=>"ch_5S9e0XH4qjKZr4.122"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Rain Drop Acrylic "},"order_date"=>{:n=>"1420381600.883161"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381600.883733"}},:table_name=>"curliceu_orders")  
+
+(262.74 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381600.88358, :updated_at=>1420381600.883733, :id=>"ch_5S9e0XH4qjKZr4.122", :order_date=>1420381600.883161, :amount=>50, :text=>"Wolfgang", :font=>"vonfontregular", :material=>"Rain Drop Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (2.9ms)
+
+PrinterMailer#printer: processed outbound mail in 18.8ms
+Completed 500 Internal Server Error in 1885ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb___3948833926310407226_70143737838880'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:49:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (57.9ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:27:40 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9fXQLIwhmT9A", "price"=>"5000", "material"=>"Gold Acrylic ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.247071 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381661.810327"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5S9f1O2vpp8Ubl.91"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Gold Acrylic "},"order_date"=>{:n=>"1420381661.8099232"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381661.810498"}},:table_name=>"curliceu_orders")  
+
+(248.14 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381661.810327, :updated_at=>1420381661.810498, :id=>"ch_5S9f1O2vpp8Ubl.91", :order_date=>1420381661.8099232, :amount=>50, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Gold Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (1.9ms)
+
+PrinterMailer#printer: processed outbound mail in 16.2ms
+Completed 500 Internal Server Error in 1869ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb___3948833926310407226_70143737838880'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (56.8ms)
+[AWS DynamoDB 200 0.267983 0 retries] list_tables()  
+
+(276.33 ms) LIST TABLES - [[]]
+(276.42 ms) CACHE TABLES
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:28:34 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9ggeZK0n2Ixx", "price"=>"5000", "material"=>"Pink Passion Acrylic ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.248185 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.077846 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381717.1081889"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5S9gVnvGGbpY3e.67"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Pink Passion Acrylic "},"order_date"=>{:n=>"1420381717.1060438"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381717.1084"}},:table_name=>"curliceu_orders")  
+
+(337.56 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381717.1081889, :updated_at=>1420381717.1084, :id=>"ch_5S9gVnvGGbpY3e.67", :order_date=>1420381717.1060438, :amount=>50, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Pink Passion Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (4.8ms)
+
+PrinterMailer#printer: processed outbound mail in 34.7ms
+Completed 500 Internal Server Error in 2428ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb__3882579562728724643_70261051983600'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (65.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:32:14 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9jXw6v7Ls1zw", "price"=>"5000", "material"=>"Gold Acrylic ", "text"=>"Wolfgang", "font"=>"Slackey"}
+[AWS DynamoDB 200 0.286675 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381936.4412339"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Slackey"},"id"=>{:s=>"ch_5S9jQEf1YL79GY.190"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Gold Acrylic "},"order_date"=>{:n=>"1420381936.44088"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381936.4414458"}},:table_name=>"curliceu_orders")  
+
+(287.75 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381936.4412339, :updated_at=>1420381936.4414458, :id=>"ch_5S9jQEf1YL79GY.190", :order_date=>1420381936.44088, :amount=>50, :text=>"Wolfgang", :font=>"Slackey", :material=>"Gold Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (1.9ms)
+
+PrinterMailer#printer: processed outbound mail in 21.9ms
+Completed 500 Internal Server Error in 2025ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb__3882579562728724643_70261051983600'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (59.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:32:48 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9kkUiiFs8dqU", "price"=>"7000", "material"=>"Yellowheart Wood ", "text"=>"Wolfgang", "font"=>"Lily-Script One"}
+[AWS DynamoDB 200 0.3146 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420381970.233537"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Lily-Script One"},"id"=>{:s=>"ch_5S9kTEyGgfjywB.124"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Yellowheart Wood "},"order_date"=>{:n=>"1420381970.2331479"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420381970.233689"}},:table_name=>"curliceu_orders")  
+
+(316.02 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420381970.233537, :updated_at=>1420381970.233689, :id=>"ch_5S9kTEyGgfjywB.124", :order_date=>1420381970.2331479, :amount=>70, :text=>"Wolfgang", :font=>"Lily-Script One", :material=>"Yellowheart Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+Completed 500 Internal Server Error in 2107ms
+
+NoMethodError (undefined method `display_info' for #<Order:0x007fcddd582598>):
+  app/controllers/charges_controller.rb:52:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (62.2ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:34:26 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9mmkfnJiq5hz", "price"=>"7000", "material"=>"Padauk Wood ", "text"=>"Wolfgang", "font"=>"Oleo-Script Swash Caps"}
+[AWS DynamoDB 200 0.300398 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420382067.92227"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Oleo-Script Swash Caps"},"id"=>{:s=>"ch_5S9mdmAcfyKcQg.184"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Padauk Wood "},"order_date"=>{:n=>"1420382067.921843"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420382067.922424"}},:table_name=>"curliceu_orders")  
+
+(301.27 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420382067.92227, :updated_at=>1420382067.922424, :id=>"ch_5S9mdmAcfyKcQg.184", :order_date=>1420382067.921843, :amount=>70, :text=>"Wolfgang", :font=>"Oleo-Script Swash Caps", :material=>"Padauk Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered charges/create.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2607ms (Views: 444.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-04 09:34:28 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-04 09:34:29 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-04 09:34:29 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:36:01 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9n0l0G2gpH8K", "price"=>"7000", "material"=>"Yellowheart Wood ", "text"=>"Wolfgang", "font"=>"Pacifico"}
+[AWS DynamoDB 200 0.250595 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420382162.843026"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Pacifico"},"id"=>{:s=>"ch_5S9nfR0xc7gNp3.132"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Yellowheart Wood "},"order_date"=>{:n=>"1420382162.842672"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420382162.843178"}},:table_name=>"curliceu_orders")  
+
+(251.48 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420382162.843026, :updated_at=>1420382162.843178, :id=>"ch_5S9nfR0xc7gNp3.132", :order_date=>1420382162.842672, :amount=>70, :text=>"Wolfgang", :font=>"Pacifico", :material=>"Yellowheart Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (1.6ms)
+
+PrinterMailer#printer: processed outbound mail in 16.0ms
+Completed 500 Internal Server Error in 2005ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:   </head>
+    4:   <body>
+    5:     <b>Order</b><br>
+    6:     <%= @order.id %>
+    7:     <p>
+    8:     <b>Text</b><br>
+    9:     <%= @order.text %>
+  app/views/printer_mailer/printer.html.erb:6:in `_app_views_printer_mailer_printer_html_erb__3882579562728724643_70261051983600'
+  app/mailers/printer_mailer.rb:4:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (56.6ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:37:38 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9pLszpYPrIKt", "price"=>"5000", "material"=>"Gold Acrylic ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.259613 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420382259.919863"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5S9pty7Xwml6Ix.170"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Gold Acrylic "},"order_date"=>{:n=>"1420382259.9194381"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420382259.92007"}},:table_name=>"curliceu_orders")  
+
+(260.75 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420382259.919863, :updated_at=>1420382259.92007, :id=>"ch_5S9pty7Xwml6Ix.170", :order_date=>1420382259.9194381, :amount=>50, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Gold Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (2.1ms)
+
+PrinterMailer#printer: processed outbound mail in 17.2ms
+Completed 500 Internal Server Error in 2073ms
+
+ActionView::Template::Error (undefined method `shipMethod' for #<Order:0x007fcddeeb93e0>):
+    15:     <%= @order.material %>
+    16:     <p>
+    17:     <b>Shipping Mathod</b> <br>
+    18:     <%= @order.shipMethod %>
+    19:     <p>
+    20:     <b>Customer contact</b><br>
+    21:     email: <%= @order.customerEmail %><br>
+  app/views/printer_mailer/printer.html.erb:18:in `_app_views_printer_mailer_printer_html_erb__3882579562728724643_70261051983600'
+  app/mailers/printer_mailer.rb:5:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (61.0ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:38:22 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9qbz5Fkq9uGs", "price"=>"7000", "material"=>"Yellowheart Wood ", "text"=>"Wolfgang", "font"=>"Pacifico"}
+[AWS DynamoDB 200 0.224628 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420382303.538799"},"customer_email"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Pacifico"},"id"=>{:s=>"ch_5S9qBZ2EmxlPQ8.166"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Yellowheart Wood "},"order_date"=>{:n=>"1420382303.5384362"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420382303.538948"}},:table_name=>"curliceu_orders")  
+
+(225.81 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420382303.538799, :updated_at=>1420382303.538948, :id=>"ch_5S9qBZ2EmxlPQ8.166", :order_date=>1420382303.5384362, :amount=>70, :text=>"Wolfgang", :font=>"Pacifico", :material=>"Yellowheart Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customer_email=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (2.4ms)
+
+PrinterMailer#printer: processed outbound mail in 16.8ms
+Completed 500 Internal Server Error in 1598ms
+
+ActionView::Template::Error (undefined method `customerEmail' for #<Order:0x007fcddee41390>):
+    18:     <%= @order.shippingMethod %>
+    19:     <p>
+    20:     <b>Customer contact</b><br>
+    21:     email: <%= @order.customerEmail %><br>
+    22:     sms: <%= @order.customerSMS %><br>
+    23:     <p>
+    24:     <b>Shipping Address</b>
+  app/views/printer_mailer/printer.html.erb:21:in `_app_views_printer_mailer_printer_html_erb__3882579562728724643_70261106062520'
+  app/mailers/printer_mailer.rb:5:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (57.8ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:39:11 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9q3NafqgPyrm", "price"=>"7000", "material"=>"Wenge Wood ", "text"=>"Wolfgang", "font"=>"Lily-Script One"}
+[AWS DynamoDB 200 0.244934 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420382353.6121001"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Lily-Script One"},"id"=>{:s=>"ch_5S9qmmEDj2fYjj.30"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Wenge Wood "},"order_date"=>{:n=>"1420382353.611735"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420382353.612252"}},:table_name=>"curliceu_orders")  
+
+(245.89 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420382353.6121001, :updated_at=>1420382353.612252, :id=>"ch_5S9qmmEDj2fYjj.30", :order_date=>1420382353.611735, :amount=>70, :text=>"Wolfgang", :font=>"Lily-Script One", :material=>"Wenge Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (2.9ms)
+
+PrinterMailer#printer: processed outbound mail in 19.2ms
+Completed 500 Internal Server Error in 2221ms
+
+ActionView::Template::Error (undefined method `customerSMS' for #<Order:0x007fcddecf8d58>):
+    19:     <p>
+    20:     <b>Customer contact</b><br>
+    21:     email: <%= @order.customerEmail %><br>
+    22:     sms: <%= @order.customerSMS %><br>
+    23:     <p>
+    24:     <b>Shipping Address</b>
+    25:     <%= @order.shippingName %><br>
+  app/views/printer_mailer/printer.html.erb:22:in `_app_views_printer_mailer_printer_html_erb__3882579562728724643_70261106062520'
+  app/mailers/printer_mailer.rb:5:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (59.5ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:39:45 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9rt5UXX2NBIM", "price"=>"7000", "material"=>"Wenge Wood ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.364938 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420382386.988616"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5S9r4YeQsBEpEU.29"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Wenge Wood "},"order_date"=>{:n=>"1420382386.98811"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420382386.988823"}},:table_name=>"curliceu_orders")  
+
+(366.08 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420382386.988616, :updated_at=>1420382386.988823, :id=>"ch_5S9r4YeQsBEpEU.29", :order_date=>1420382386.98811, :amount=>70, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Wenge Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (4.0ms)
+
+PrinterMailer#printer: processed outbound mail in 25.5ms
+Completed 500 Internal Server Error in 1788ms
+
+ActionView::Template::Error (undefined method `shippingName' for #<Order:0x007fcddedf3dc0>):
+    22:     sms: <%= @order.customerSms %><br>
+    23:     <p>
+    24:     <b>Shipping Address</b>
+    25:     <%= @order.shippingName %><br>
+    26:     <%= @order.shippingAddress1 %> <%= @order.shippingAddress2 %><br>
+    27:     <%= @order.shipCity %>, <%= @order.shipState %> <%= @order.shipZip %><br>
+    28:   </body>
+  app/views/printer_mailer/printer.html.erb:25:in `_app_views_printer_mailer_printer_html_erb__3882579562728724643_70261091069800'
+  app/mailers/printer_mailer.rb:5:in `printer'
+  app/controllers/charges_controller.rb:47:in `create'
+
+
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Users/marc/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (61.9ms)
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:40:06 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9r4GzfFGa760", "price"=>"5000", "material"=>"Gold Acrylic ", "text"=>"Wolfgang", "font"=>"wolf_in_the_cityregular"}
+[AWS DynamoDB 200 0.259489 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"50"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420382408.5970922"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"wolf_in_the_cityregular"},"id"=>{:s=>"ch_5S9roFe1H6laeA.39"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Gold Acrylic "},"order_date"=>{:n=>"1420382408.596575"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420382408.597295"}},:table_name=>"curliceu_orders")  
+
+(260.59 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420382408.5970922, :updated_at=>1420382408.597295, :id=>"ch_5S9roFe1H6laeA.39", :order_date=>1420382408.596575, :amount=>50, :text=>"Wolfgang", :font=>"wolf_in_the_cityregular", :material=>"Gold Acrylic ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (0.6ms)
+  Rendered printer_mailer/printer.html (0.3ms)
+  Rendered printer_mailer/printer.text.erb (0.3ms)
+
+PrinterMailer#printer: processed outbound mail in 272.6ms
+
+Sent mail to printing@curlic.eu (1077.2ms)
+Date: Sun, 04 Jan 2015 09:40:09 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a950c92182d_108813fe6ecc192d413036@Marcs-MacBook-Pro.local.mail>
+Subject: Order ch_5S9roFe1H6laeA
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a950c91f4fa_108813fe6ecc192d41292a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a950c91f4fa_108813fe6ecc192d41292a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a950c91f4fa_108813fe6ecc192d41292a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    ch_5S9roFe1H6laeA
+    <p>
+    <b>Text</b><br>
+    Wolfgang
+    <p>
+    <b>Font</b><br>
+    wolf_in_the_cityregular
+    <p>
+    <b>Material</b><br>
+    Gold Acrylic 
+    <p>
+    <b>Shipping Mathod</b> <br>
+    40223
+    <p>
+    <b>Customer contact</b><br>
+    email: marc.cull@gmail.com<br>
+    sms: <br>
+    <p>
+    <b>Shipping Address</b>
+    Marc Cull<br>
+    11501 valley view rd <br>
+    anchorage, KY 40223<br>
+  </body>
+</html>
+
+----==_mimepart_54a950c91f4fa_108813fe6ecc192d41292a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a950c91f4fa_108813fe6ecc192d41292a--
+
+  Rendered charges/create.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3481ms (Views: 166.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-04 09:40:10 -0500
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:41:13 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9s92gllcX4JR", "price"=>"7000", "material"=>"Yellowheart Wood ", "text"=>"Wolfgang", "font"=>"Yellowtail"}
+[AWS DynamoDB 200 0.267231 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420382475.257484"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Yellowtail"},"id"=>{:s=>"ch_5S9sSvPUlHqpNN.197"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Yellowheart Wood "},"order_date"=>{:n=>"1420382475.257136"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420382475.257628"}},:table_name=>"curliceu_orders")  
+
+(268.22 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420382475.257484, :updated_at=>1420382475.257628, :id=>"ch_5S9sSvPUlHqpNN.197", :order_date=>1420382475.257136, :amount=>70, :text=>"Wolfgang", :font=>"Yellowtail", :material=>"Yellowheart Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (0.1ms)
+  Rendered printer_mailer/printer.html (0.0ms)
+  Rendered printer_mailer/printer.text.erb (0.0ms)
+
+PrinterMailer#printer: processed outbound mail in 25.7ms
+
+Sent mail to printing@curlic.eu (1012.9ms)
+Date: Sun, 04 Jan 2015 09:41:15 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a9510b87471_108813fe6f148128813280@Marcs-MacBook-Pro.local.mail>
+Subject: Order ch_5S9sSvPUlHqpNN
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a9510b862e2_108813fe6f14812881311a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a9510b862e2_108813fe6f14812881311a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a9510b862e2_108813fe6f14812881311a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    ch_5S9sSvPUlHqpNN
+    <p>
+    <b>Text</b><br>
+    Wolfgang
+    <p>
+    <b>Font</b><br>
+    Yellowtail
+    <p>
+    <b>Material</b><br>
+    Yellowheart Wood 
+    <p>
+    <b>Shipping Mathod</b> <br>
+    40223
+    <p>
+    <b>Customer contact</b><br>
+    email: marc.cull@gmail.com<br>
+    sms: <br>
+    <p>
+    <b>Shipping Address</b>
+    Marc Cull<br>
+    11501 valley view rd <br>
+    anchorage, KY 40223<br>
+  </body>
+</html>
+
+----==_mimepart_54a9510b862e2_108813fe6f14812881311a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    {{order}}
+    <p>
+    <b>Text</b><br>
+    {{text}}
+    <p>
+    <b>Font</b><br>
+    {{font}}<br>
+    <p>
+    <b>Material</b><br>
+    {{material}}
+    <p>
+    <b>Image</b><br>
+    <a href="{{imgUrl}}"><img src="{{imgUrl}}" style="height:50px"></a>
+    <p>
+    <b>Shipping Mathod</b> <br>
+    {{shipMethod}}<br>
+    <p>
+    <b>Customer contact</b><br>
+    email: {{email}}<br>
+    sms: {{sms}}<br>
+    <p>
+    <b>Shipping Address</b>
+    {{shipName}}<br>
+    {{shipAddress1}} {{shipAddress2}}<br>
+    {{shipCity}}, {{shipState}} {{shipZip}}<br>
+  </body>
+</html>
+
+----==_mimepart_54a9510b862e2_108813fe6f14812881311a--
+
+  Rendered charges/create.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3295ms (Views: 164.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-04 09:41:16 -0500
+[AWS DynamoDB 200 0.240921 0 retries] list_tables()  
+
+(248.66 ms) LIST TABLES - [[]]
+(248.81 ms) CACHE TABLES
+
+
+Started POST "/charges" for ::1 at 2015-01-04 09:42:17 -0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2x3728eBDN5hwtdN0iQWgUdRPZExrXGgHMbHAc//vs8B49pVT8yFxF5NoJogZXcCwCxcKAq0LKxpGSvW5WZUw==", "billName"=>"Marc Cull", "billAddress1"=>"11501 valley view rd", "billAddress2"=>"", "billCity"=>"anchorage", "billState"=>"KY", "billZip"=>"40223", "billEmail"=>"marc.cull@gmail.com", "billSMS"=>"", "shippingMethod"=>"ground", "shipName"=>"Marc Cull", "shipAddress1"=>"11501 valley view rd", "shipAddress2"=>"", "shipCity"=>"anchorage", "shipState"=>"KY", "shipZip"=>"40223", "stripeToken"=>"tok_5S9tH2BuNvfn6m", "price"=>"7000", "material"=>"Yellowheart Wood ", "text"=>"Wolfgang", "font"=>"Pacifico"}
+[AWS DynamoDB 200 0.249362 0 retries] describe_table(:table_name=>"curliceu_orders")  
+
+[AWS DynamoDB 200 0.071935 0 retries] put_item(:expected=>{"id"=>{:exists=>false}},:item=>{"amount"=>{:n=>"70"},"billAddress1"=>{:s=>"11501 valley view rd"},"billCity"=>{:s=>"anchorage"},"billName"=>{:s=>"Marc Cull"},"billState"=>{:s=>"KY"},"billZip"=>{:s=>"40223"},"cardBrand"=>{:s=>"Visa"},"created_at"=>{:n=>"1420382539.413126"},"customerEmail"=>{:s=>"marc.cull@gmail.com"},"font"=>{:s=>"Pacifico"},"id"=>{:s=>"ch_5S9tbNn55o5s1l.12"},"last4"=>{:s=>"4242"},"material"=>{:s=>"Yellowheart Wood "},"order_date"=>{:n=>"1420382539.410941"},"shipAddress1"=>{:s=>"11501 valley view rd"},"shipCity"=>{:s=>"anchorage"},"shipName"=>{:s=>"Marc Cull"},"shipState"=>{:s=>"KY"},"shipZip"=>{:s=>"40223"},"shippingMethod"=>{:s=>"40223"},"text"=>{:s=>"Wolfgang"},"updated_at"=>{:n=>"1420382539.413343"}},:table_name=>"curliceu_orders")  
+
+(330.91 ms) PUT ITEM - [["curliceu_orders", {:created_at=>1420382539.413126, :updated_at=>1420382539.413343, :id=>"ch_5S9tbNn55o5s1l.12", :order_date=>1420382539.410941, :amount=>70, :text=>"Wolfgang", :font=>"Pacifico", :material=>"Yellowheart Wood ", :cardBrand=>"Visa", :last4=>"4242", :billName=>"Marc Cull", :billAddress1=>"11501 valley view rd", :billCity=>"anchorage", :billState=>"KY", :billZip=>"40223", :shippingMethod=>"40223", :shipName=>"Marc Cull", :shipAddress1=>"11501 valley view rd", :shipCity=>"anchorage", :shipState=>"KY", :shipZip=>"40223", :customerEmail=>"marc.cull@gmail.com"}, {:unless_exists=>[:id, :id]}]]
+  Rendered printer_mailer/printer.html.erb (2.9ms)
+  Rendered printer_mailer/printer.text.erb (0.4ms)
+
+PrinterMailer#printer: processed outbound mail in 272.1ms
+
+Sent mail to printing@curlic.eu (1238.8ms)
+Date: Sun, 04 Jan 2015 09:42:20 -0500
+From: admin@curlic.eu
+To: printing@curlic.eu
+Message-ID: <54a9514cbeab_108ac3fefbea0600c53545@Marcs-MacBook-Pro.local.mail>
+Subject: Order ch_5S9tbNn55o5s1l
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a9514ca311_108ac3fefbea0600c534af";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a9514ca311_108ac3fefbea0600c534af
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order Id: " . $charge["id"] . "\n";
+  $textOnly .= "Material : " .$_POST['material'] . "\n";
+  $textOnly .= "Text: " .$_POST['text'] . "\n";
+  $textOnly .= "Font: " .$_POST['font'] . "\n";
+  $textOnly .= "Graphic Url: " .$graphicUrl . "\n";
+  $textOnly .= "Shipping Method: " .$_POST['shippingMethod'] . "\n";
+  $textOnly .= "Ship Name: " .$_POST['shipName'] . "\n";
+  $textOnly .= "Ship Address 1: " .$_POST['shipAddress1'] . "\n";
+  if (ISSET($_POST["shipAddress2"]) && strlen($_POST["shipAddress2"]) > 0) {
+    $textOnly .= "ship Address 2: " . $_POST['shipAddress2'] . "\n";
+  }
+  $textOnly .= "Ship City: " .$_POST['shipCity'] . "\n";
+  $textOnly .= "Ship State: " .$_POST['shipState'] . "\n";
+  $textOnly .= "Ship Zip: " .$_POST['shipZip'] . "\n";
+
+  $textOnly .= "Customer Email: " .$_POST['billEmail'] . "\n";
+  $textOnly .= "Customer SMS: " .$_POST['billSMS'] . "\n";
+
+----==_mimepart_54a9514ca311_108ac3fefbea0600c534af
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+  </head>
+  <body>
+    <b>Order</b><br>
+    ch_5S9tbNn55o5s1l
+    <p>
+    <b>Text</b><br>
+    Wolfgang
+    <p>
+    <b>Font</b><br>
+    Pacifico
+    <p>
+    <b>Material</b><br>
+    Yellowheart Wood 
+    <p>
+    <b>Shipping Mathod</b> <br>
+    40223
+    <p>
+    <b>Customer contact</b><br>
+    email: marc.cull@gmail.com<br>
+    sms: <br>
+    <p>
+    <b>Shipping Address</b>
+    Marc Cull<br>
+    11501 valley view rd <br>
+    anchorage, KY 40223<br>
+  </body>
+</html>
+
+----==_mimepart_54a9514ca311_108ac3fefbea0600c534af--
+
+  Rendered charges/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3971ms (Views: 287.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fonts-703a8620a8610971a8bec0f1204dcad0.css?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/app-ce7d3bb4fc983f120041a1cce685ee44.css?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/framework_and_overrides-db2d4831ecc69fb46bbcbf33e3fd895c.css?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/main-069e88c06b889877799890854d7f4c40.css?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation-801b02a37790d16dad6ef2d1921d3ea4.css?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/ribbon-97a62002e4bf66d45676e18b44ca0a6c.css?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/jquery-72e2e41c86f5c9dca7fad2e5a570789a.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation-fabce0cc6c5da040191f1c2076da4059.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.abide-2f7821c4e5c0d6841239c173ec88fe91.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion-eb706f7d70685cf0104fe36ca26f8d33.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.alert-1d8e7d7f6278a5f27cdba62aabe9bf92.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing-00c746975b220cc93b8dcb0649f5ef88.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown-a84e274b641473a6a73468b16eb2d972.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange-242f77a5b69f7bfaa6f539138d384840.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride-32cef02156aea72a2a15ddabbc3e8571.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan-e0886eaa7337f631321139db79e8075c.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas-c97e8ad46a0c74f5651c152276a9c1ab.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit-d5dd7bf984d76efafd19a94be2e1ea41.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal-18a9cfa7623a4f332721cbe70d18c584.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.tab-743510b4ccc3c6b181bd013b6ccb8fd4.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.slider-8d90946a9b9621e8c0a173bb356db9d0.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip-c0dc1182179edf69d7cc8b4f78ab5d62.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar-b17b40f00a0d197a9ca2969efa545b34.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer-837ede186b913555c0d8a4b209350676.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/charges-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/main-2936ea9657e14a9b43255b7ec173e064.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/application-9c8479aa66f7bdd7812d59b5c93ba892.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/jquery.color-2.1.2-a42aa117c8d288eb090374c382c138cf.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500
+
+
+Started GET "/assets/math.uuid-3a955cb77d9c06b601e7ad60e662d3a3.js?body=1" for ::1 at 2015-01-04 09:42:21 -0500

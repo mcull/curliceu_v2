@@ -24,6 +24,6 @@ class Order
     field :shipCity
     field :shipState
     field :shipZip
-    field :customer_email
-    field :customer_sms
+    field :customerEmail
+    field :customerSms
 end

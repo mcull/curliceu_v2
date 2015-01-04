@@ -28,29 +28,24 @@ def create
   @order.last4 = charge[:card][:last4]
   @order.billName = params[:billName]
   @order.billAddress1 = params[:billAddress1]
-  @order.billAddress2 = params.has_key?(:billAddress2) ? params[:billAddress2]: "none"
+  @order.billAddress2 = params.has_key?(:billAddress2) ? params[:billAddress2]: ""
   @order.billCity = params[:billCity]
   @order.billState = params[:billState]
   @order.billZip = params[:billZip]
   @order.shippingMethod = params[:billZip]
   @order.shipName = params[:shipName]
   @order.shipAddress1 = params[:shipAddress1]
-  @order.shipAddress2 = params.has_key?(:shipAddress2) ? params[:shipAddress2]: "none"
+  @order.shipAddress2 = params.has_key?(:shipAddress2) ? params[:shipAddress2]: ""
   @order.shipCity = params[:shipCity]
   @order.shipState = params[:shipState]
   @order.shipZip = params[:shipZip]
-  @order.customer_email = params[:billEmail]
-  @order.customer_sms = params.has_key?(:billSMS) ? params[:billSMS]: "none"
+  @order.customerEmail = params[:billEmail]
+  @order.customerSms = params.has_key?(:billSMS) ? params[:billSMS]: ""
 
   @order.save
 
-  ses = AWS::SimpleEmailService.new
-  ses.send_email(
-  :subject => 'Curliceu Order ' + @order.id,
-  :from => 'admin@curlic.eu',
-  :to => 'printing@curlic.eu',
-  :body_text => 'Migrating email to Rails',
-  :body_html => '<h1>Migrating email to Rails</h1> In Progress')
+  PrinterMailer.printer(@order).deliver_now
+
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
