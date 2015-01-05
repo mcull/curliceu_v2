@@ -1,0 +1,88 @@
+<div class="container">
+   <div class="row">
+      <div class="large-12 columns" style="display:none;padding-top:1rem;padding-bottom:2rem;">
+        Sorry!!  We could not process your payment:
+        <span style="color:red;font-weight:bold">
+        <!-- if error, it would go here -->
+        </span>
+       <p>Please go back to
+        try your order again.
+
+        <p>For questions,
+        contact us anytime at <a href="mailto:help@curlic.eu">help@curlic.eu</a>.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns" style="text-align:center;font-size:2rem;font-family:Rochester;padding-top:2rem;">
+        Curliceu<span style="top:.4rem;position:relative;font-size:1rem"><small>&trade;</small></span>
+      </div>
+    </div>
+     <div class="row">
+      <div class="large-12 columns" style="text-align:center;font-size:1.5em;padding-top:1rem">
+        Reciept
+      </div>
+    </div>
+     <div class="row">
+      <div class="large-12 columns" style="padding-top:1rem;padding-bottom:2rem;">
+        We've received payment for your <b>Signature Necklace</b>.
+        You can keep this receipt for your records.  For questions,
+        contact us anytime at <a href="mailto:help@curlic.eu">help@curlic.eu</a>.
+      </div>
+    </div>
+
+    <div class="row receiptRow">
+      <div class="large-4 medium-4 small-4 columns">Date</div>
+      <div class="large-8 medium-8 small-8 columns"><b><%= @order.order_date.strftime("%B %e, %Y %l:%M%p (%Z)") %></b></div>
+    </div>
+    <div class="row receiptRow">
+      <div class="large-4 medium-4 small-4 columns">Billed To</div>
+      <div class="large-8 medium-8 small-8 columns">
+        <b><%= @order.billName %><br>
+          <%= @order.billAddress1.split.map(&:capitalize).join(' ') %><br>
+          <%= "none".eql?(@order.billAddress2) ? @order.billAddress2 + "<br>": ""; %>
+          <%= @order.billCity.split.map(&:capitalize).join(' ') + ", " + @order.billState + " " + @order.billZip %>
+        </b>
+      </div>
+    </div>
+    <div class="row receiptRow">
+      <div class="large-4 medium-4 small-4 columns">Ship To</div>
+      <div class="large-8 medium-8 small-8 columns">
+        <b><%= @order.shipName %><br>
+          <%= @order.shipAddress1.split.map(&:capitalize).join(' ') %><br>
+          <%= "none".eql?(@order.shipAddress2) ? @order.shipAddress2 + "<br>" : ""; %>
+          <%= @order.shipCity.split.map(&:capitalize).join(' ') + ", " + @order.shipState + " " + @order.shipZip %>
+        </b>
+      </div>
+    </div>
+    <div class="row receiptRow">
+      <div class="large-4 medium-4 small-4 columns">Amount Charged</div>
+      <div class="large-8 medium-8 small-8 columns"><b>USD $<%= @order.amount %></b></div>
+    </div>
+  <div class="row receiptRow">
+      <div class="large-4 medium-4 small-4 columns">Charged To</div>
+      <div class="large-8 medium-8 small-8 columns"><b><%= @order.cardBrand + " (***" + @order.last4 + ")" %></b></div>
+    </div>
+  <div class="row receiptRow">
+      <div class="large-4 medium-4 small-4 columns">Transaction ID</div>
+      <div class="large-8 medium-8 small-8 columns"><b><%= @order.id %></b></div>
+    </div>
+
+  <div class="row">
+      <div class="large-12 columns" style="margin-top:3rem;font-size:3rem;opacity:.5;font-family:Rochester;height:3rem;">Thank you</div>
+    </div>
+
+  <div class="row" style="font-size:.6rem;line-height:.75rem;top:.5rem;position:relative;">
+      <div class="large-4 medium-4 small-4 columns">
+        Curlic.eu<br>
+        11501 Valley View Road<br>
+        Anchorage, KY 4023<br>
+        United States
+      </div>
+      <div class="large-8 medium-8 small-8 columns">
+        help@curlic.eu<br>
+        https://curlic.eu/contact
+
+      </div>
+    </div>
+</div>

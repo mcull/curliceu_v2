@@ -299,40 +299,12 @@
         </div>
         <div class="large-4 medium-6 small-4 columns">
           <label>Exp Mon
-            <select data-stripe="exp-month"/>
-              <option value="01">JAN</option>
-              <option value="02">FEB</option>
-              <option value="03">MAR</option>
-              <option value="04">APR</option>
-              <option value="05">MAY</option>
-              <option value="06">JUN</option>
-              <option value="07">JUL</option>
-              <option value="08">AUG</option>
-              <option value="09">SEP</option>
-              <option value="10">OCT</option>
-              <option value="11">NOV</option>
-              <option value="12">DEC</option>
-            </select>
+            <%= select_tag "exp_month", options_for_select(credit_card_expiration_months),'data-stripe'=>'exp-month' %>
           </label>
         </div>
         <div class="large-4 medium-6 small-4 columns">
           <label>Exp Year
-             <select data-stripe="exp-year"/>
-              <option value="2015">2015</option>
-              <option value="2016">2016</option>
-              <option value="2017">2017</option>
-              <option value="2018">2018</option>
-              <option value="2019">2019</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
-              <option value="2027">2027</option>
-              <option value="2028">2028</option>
-            </select>
+             <%= select_tag "exp_year", options_for_select(credit_card_expiration_years),'data-stripe'=>'exp-year' %>
           </label>
         </div>
         <div class="large-4 medium-4 small-4 columns"></div>
@@ -348,91 +320,39 @@
         </div>
         <div class="large-8 medium-8 small-8 columns">
             <label>Address
-              <%= f.text_field :billAddress1, :data-stripe=>"address_line1" %>
+              <%= f.text_field :billAddress1, 'data-stripe'=>'address_line1' %>
             </label>
         </div>
         <div class="large-4 medium-4 small-4 columns">
             <label>Apt
-              <input type="text" name="billAddress2" id="billAddress2" data-stripe="address_line2"/>
+              <%= f.text_field :billAddress2, 'data-stripe'=>'address_line2' %>
             </label>
         </div>
         <div class="large-12 columns">
             <label>City
-              <input type="text" name="billCity" id="billCity" data-stripe="address_city" />
+              <%= f.text_field :billCity, 'data-stripe'=>'address_city' %>
             </label>
         </div>
         <div class="large-3 medium-3 small-3 columns">
             <label>State
-             <select name="billState" id="billState">
-                <option value="AL">AL</option>
-                <option value="AK">AK</option>
-                <option value="AZ">AZ</option>
-                <option value="AR">AR</option>
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="CT">CT</option>
-                <option value="DE">DE</option>
-                <option value="DC">DC</option>
-                <option value="FL">FL</option>
-                <option value="GA">GA</option>
-                <option value="HI">HI</option>
-                <option value="ID">ID</option>
-                <option value="IL">IL</option>
-                <option value="IN">IN</option>
-                <option value="IA">IA</option>
-                <option value="KS">KS</option>
-                <option value="KY">KY</option>
-                <option value="LA">LA</option>
-                <option value="ME">ME</option>
-                <option value="MD">MD</option>
-                <option value="MA">MA</option>
-                <option value="MI">MI</option>
-                <option value="MN">MN</option>
-                <option value="MS">MS</option>
-                <option value="MO">MO</option>
-                <option value="MT">MT</option>
-                <option value="NE">NE</option>
-                <option value="NV">NV</option>
-                <option value="NH">NH</option>
-                <option value="NJ">NJ</option>
-                <option value="NM">NM</option>
-                <option value="NY">NY</option>
-                <option value="NC">NC</option>
-                <option value="ND">ND</option>
-                <option value="OH">OH</option>
-                <option value="OK">OK</option>
-                <option value="OR">OR</option>
-                <option value="PA">PA</option>
-                <option value="RI">RI</option>
-                <option value="SC">SC</option>
-                <option value="SD">SD</option>
-                <option value="TN">TN</option>
-                <option value="TX">TX</option>
-                <option value="UT">UT</option>
-                <option value="VT">VT</option>
-                <option value="VA">VA</option>
-                <option value="WA">WA</option>
-                <option value="WV">WV</option>
-                <option value="WI">WI</option>
-                <option value="WY">WY</option>
-              </select>
+              <%= f.select :billState, options_for_select(us_states) %>
             </label>
         </div>
         <div class="large-4 medium-4 small-4 columns">
             <label>Zip
-              <input type="text" pattern="\d*" name="billZip" id="billZip" data-stripe="address_zip" />
+              <%= f.text_field :billZip, 'pattern'=>'\d*','data-stripe'=>'address_zip' %>
             </label>
         </div>
         <div class="large-5 medium-5 small-5 columns"></div>
 
         <div class="large-7 medium-7 small-7 columns">
           <label>Email
-              <input type="text" name="billEmail" id="billEmail" placeholder="you@email.com"/>
+            <%= f.text_field :customerEmail, 'placeholder'=>'you@email.com' %>
             </label>
         </div>
         <div class="large-5 medium-5 small-5 columns">
           <label>SMS <small>optional</small>
-              <input type="text" pattern="\d*" name="billSMS" id="billSMS" placeholder="5551234567"/>
+            <%= f.text_field :customerSms, 'pattern'=>'\d*','placeholder'=>'5551234567' %>
             </label>
         </div>
       </div>
@@ -444,11 +364,11 @@
       <div class="orderForm">
         <div class="large-8 medium-7 small-7 columns">
             <label>Method
-               <select name="shippingMethod" id="shippingMethod" style="font-family:'Nixie One'">
-                <option value="ground" rel-price="5">Ground +$5</option>
-                <option value="2Day" rel-price="10">2-Day +$10</option>
-                <option value="overnight" rel-price="15">Next Day +$15</option>
-              </select>
+              <%= f.select :shippingMethod, options_for_select([
+                  ['Ground +$5','ground',{ 'rel-price' => '5' }],
+                  ['2-Day +$10','2Day',{ 'rel-price' => '10' }],
+                  ['Next Day +$15','overnight',{ 'rel-price' => '15' }],
+                  ]) %>
             </label>
         </div>
         <div class="large-4 medium-5 small-5 columns" id="eta">
@@ -466,84 +386,32 @@
       <div class="orderForm">
         <div class="large-12 columns">
             <label>Name
-              <input type="text" name="shipName" id="shipName"/>
+              <%= f.text_field :shipName %>
             </label>
         </div>
         <div class="large-8 medium-8 small-8 columns">
             <label>Address
-              <input type="text" name="shipAddress1" id="shipAddress1" />
+              <%= f.text_field :shipAddress1 %>
             </label>
         </div>
         <div class="large-4 medium-4 small-4 columns">
             <label>Apt
-              <input type="text" name="shipAddress2" id="shipAddress2"/>
+              <%= f.text_field :shipAddress2 %>
             </label>
         </div>
         <div class="large-12 columns">
             <label>City
-              <input type="text"  name="shipCity" id="shipCity" />
+              <%= f.text_field :shipCity %>
             </label>
         </div>
         <div class="large-3 medium-3 small-3 columns">
             <label>State
-             <select name="shipState" id="shipState">
-                <option value="AL">AL</option>
-                <option value="AK">AK</option>
-                <option value="AZ">AZ</option>
-                <option value="AR">AR</option>
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="CT">CT</option>
-                <option value="DE">DE</option>
-                <option value="DC">DC</option>
-                <option value="FL">FL</option>
-                <option value="GA">GA</option>
-                <option value="HI">HI</option>
-                <option value="ID">ID</option>
-                <option value="IL">IL</option>
-                <option value="IN">IN</option>
-                <option value="IA">IA</option>
-                <option value="KS">KS</option>
-                <option value="KY">KY</option>
-                <option value="LA">LA</option>
-                <option value="ME">ME</option>
-                <option value="MD">MD</option>
-                <option value="MA">MA</option>
-                <option value="MI">MI</option>
-                <option value="MN">MN</option>
-                <option value="MS">MS</option>
-                <option value="MO">MO</option>
-                <option value="MT">MT</option>
-                <option value="NE">NE</option>
-                <option value="NV">NV</option>
-                <option value="NH">NH</option>
-                <option value="NJ">NJ</option>
-                <option value="NM">NM</option>
-                <option value="NY">NY</option>
-                <option value="NC">NC</option>
-                <option value="ND">ND</option>
-                <option value="OH">OH</option>
-                <option value="OK">OK</option>
-                <option value="OR">OR</option>
-                <option value="PA">PA</option>
-                <option value="RI">RI</option>
-                <option value="SC">SC</option>
-                <option value="SD">SD</option>
-                <option value="TN">TN</option>
-                <option value="TX">TX</option>
-                <option value="UT">UT</option>
-                <option value="VT">VT</option>
-                <option value="VA">VA</option>
-                <option value="WA">WA</option>
-                <option value="WV">WV</option>
-                <option value="WI">WI</option>
-                <option value="WY">WY</option>
-              </select>
+              <%= f.select :shipState, options_for_select(us_states) %>
             </label>
         </div>
         <div class="large-4 medium-4 small-4 columns">
             <label>Zip
-              <input type="text" pattern="\d*"s name="shipZip" id="shipZip" />
+              <%= f.text_field :shipZip, 'pattern'=>'\d*' %>
             </label>
         </div>
         <div class="large-5 medium-5 small-5 columns"></div>

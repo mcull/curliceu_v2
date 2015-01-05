@@ -72,12 +72,12 @@ var guid;
     }
 
     function copyFromBilling() {
-      $("#shipName").val($("#billName").val());
-      $("#shipAddress1").val($("#billAddress1").val());
-      $("#shipAddress2").val($("#billAddress2").val());
-      $("#shipCity").val($("#billCity").val());
-      $("#shipState").val($("#billState").val());
-      $("#shipZip").val($("#billZip").val());
+      $("#order_shipName").val($("#order_billName").val());
+      $("#order_shipAddress1").val($("#order_billAddress1").val());
+      $("#order_shipAddress2").val($("#order_billAddress2").val());
+      $("#order_shipCity").val($("#order_billCity").val());
+      $("#order_shipState").val($("#order_billState").val());
+      $("#order_shipZip").val($("#order_billZip").val());
     }
 
 
@@ -107,8 +107,8 @@ var guid;
     }
 
     function getShippingCost() {
-      console.log($("#shippingMethod option:selected"));
-      return parseInt($("#shippingMethod option:selected").attr("rel-price"));
+      console.log($("#order_shippingMethod option:selected"));
+      return parseInt($("#order_shippingMethod option:selected").attr("rel-price"));
     }
 
     function updateOrderTotal() {
@@ -286,7 +286,7 @@ var guid;
           enableCheckoutIfReady();
         });
 
-        $('#shippingMethod').on('change', function() {
+        $('#order_shippingMethod').on('change', function() {
           if ($(".chosenMaterial").length > 0 && $(".selectedScript").length > 0) {
             updateOrderTotal();
           }
@@ -353,10 +353,10 @@ var guid;
             // Insert the token into the form so it gets submitted to the server
             var fontName = getFontByName($(".selectedScript").first().attr("id")).ttfName;
             $form.append($('<input type="hidden" name="stripeToken" />').val(token));
-            $form.append($('<input type="hidden" name="price" />').val(parseInt(getTotal()) * 100));
-            $form.append($('<input type="hidden" name="material" />').val(getMaterialName($(".chosenMaterial").first())));
-            $form.append($('<input type="hidden" name="text" />').val($("#name").val()));
-            $form.append($('<input type="hidden" name="font" />').val(fontName));
+            $form.append($('<input type="hidden" name="order[amount]" />').val(parseInt(getTotal())));
+            $form.append($('<input type="hidden" name="order[material]" />').val(getMaterialName($(".chosenMaterial").first())));
+            $form.append($('<input type="hidden" name="order[text]" />').val($("#name").val()));
+            $form.append($('<input type="hidden" name="order[font]" />').val(fontName));
 
             // and re-submit
             $form.get(0).submit();

@@ -1,26 +1,28 @@
-class ChargesController < ApplicationController
+class OrderController < ApplicationController
 
   def new
+    @order = Order.new
   end
 
   def create
 
     customer = Stripe::Customer.create(
-      :email => params[:billingEmail],
+      :email => params[:order][:billingEmail],
       :card  => params[:stripeToken]
     )
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
-      :amount      => params[:price],
+      :amount      => (params[:order][:amount]).to_i*100,
       :description => 'Charge for Curliceu',
       :currency    => 'usd'
     )
 
-    @order = Order.new(order_params);
+
+
+    @order = Order.new(params[:order]);
     @order.id = charge[:id]
     @order.order_date = DateTime.now
-    @order.amount =charge[:amount]/100
     @order.cardBrand = charge[:card][:brand]
     @order.last4 = charge[:card][:last4]
 
@@ -28,15 +30,15 @@ class ChargesController < ApplicationController
 
     PrinterMailer.printer(@order).deliver_now
 
-
     rescue Stripe::CardError => e
       flash[:error] = e.message
-      redirect_to charges_path
+      redirect_to new_order_path
+
   end
 
   private
   def order_params
-    params.require(:billName,:billAddress1, :billCity, :billState, :billZip, :shippingMethod, :shipName,:shipAddress1, :shipCity, :shipState, :shipZip, :billEmail).permit(:text, :font, :material, :billAddress2, :shipAddress2, :billSMS)
+    #params.require(:billName,:billAddress1, :billCity, :billState, :billZip, :shippingMethod, :shipName,:shipAddress1, :shipCity, :shipState, :shipZip, :billEmail).permit(:text, :font, :material, :billAddress2, :shipAddress2, :billSMS)
   end
 
 end
