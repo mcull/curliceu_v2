@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get "namesvg" => "namesvg#get", :as => "namesvg"
 
+  get "about/*page", to: 'about#show'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

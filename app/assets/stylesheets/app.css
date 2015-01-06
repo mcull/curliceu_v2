@@ -11,6 +11,18 @@ body {
   font-family:'Nixie One';
 }
 
+h3 {
+  font-family:'Nixie One';
+}
+
+p {
+  font-family:'Nixie One';
+}
+
+ol {
+  font-family:'Nixie One';
+}
+
 @media screen and (min-width: 300px){
   html{
     font-size: 12px;
@@ -71,7 +83,7 @@ body {
   cursor: pointer;
 }
 
-.brand { 
+.brand {
   font-family: 'Rochester', cursive;
  // font-size: 18px;
 }
@@ -171,8 +183,8 @@ body {
 .price {
   font-family:'Fenix';
   color:#636363;
-  
-} 
+
+}
 
 .puff_5 {
   -webkit-text-stroke: .05rem #303030;
@@ -227,7 +239,7 @@ body {
   font-family: 'Source Code Pro';
   color:white;
   position:relative;
-  
+
   width:100px;
   background-color:red;
   text-align: center;
@@ -419,4 +431,3 @@ select {
   //font-size:24px;
   font-family:'Special Elite';
 }
-

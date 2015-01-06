@@ -12,6 +12,7 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( vendor/modernizr.js )
 Rails.application.config.assets.precompile += %w( jquery.color-2.1.2.js )
 Rails.application.config.assets.precompile += %w( math.uuid.js )
+Rails.application.config.assets.precompile += %w( order.js )
 Rails.application.config.assets.precompile += %w( foundation.css )
 Rails.application.config.assets.precompile += %w( app.css )
 Rails.application.config.assets.precompile += %w( ribbon.css )
